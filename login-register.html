@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page | Sadiq E Safar by Jilani Tech</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assests/icon.png" />
+    <link rel="apple-touch-icon" href="assets/sadiq-e-safar-logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="main-sr-cont">
+        <div class="sr-container" id="sr-main-container">
+            <div class="sr-welcome" aria-hidden="true">
+                <img src="/assests/sadiq-e-safar-logo.png" alt="Sadiq-e-Safar Logo">
+                <div class="sr-welcome-icon"><i class="fas fa-user-shield"></i></div>
+                <h1 class="sr-welcome-title" style="color: white;">Hello, Welcome!</h1>
+                <p class="sr-welcome-subtitle">Login to access your account and continue your journey with us.</p>
+            </div>
+
+            <div class="sr-form">
+                <!-- LOGIN PANE -->
+                <div id="sr-login-pane" class="sr-pane active" aria-labelledby="sr-login-title">
+                    <h2 id="sr-login-title" class="sr-form-title">Login</h2>
+                    <p class="sr-form-subtitle">Enter your credentials to access your account</p>
+
+                    <form id="sr-login-form">
+                        <div class="sr-form-group">
+                            <label for="sr-username">Username</label>
+                            <input id="sr-username" class="sr-form-control" type="text"
+                                placeholder="Enter your username" required>
+                        </div>
+
+                        <div class="sr-form-group">
+                            <label for="sr-password">Password</label>
+                            <input id="sr-password" class="sr-form-control" type="password"
+                                placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="sr-checkbox-group">
+                            <input type="checkbox" id="sr-remember">
+                            <label for="sr-remember">Remember me</label>
+                        </div>
+
+                        <button type="submit" class="sr-btn">Login</button>
+
+                        <div class="sr-toggle-container">
+                            <p>Don't have an account? <a id="sr-go-to-register" class="sr-toggle-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- REGISTER PANE -->
+                <div id="sr-register-pane" class="sr-pane" aria-labelledby="sr-register-title">
+                    <h2 id="sr-register-title" class="sr-form-title">Registration</h2>
+                    <p class="sr-form-subtitle">Fill in your details to create an account</p>
+
+                    <div class="sr-register-scroll">
+                        <form id="sr-register-form">
+                            <div class="sr-form-row">
+                                <div class="sr-form-group">
+                                    <label for="sr-name">Full Name</label>
+                                    <input id="sr-name" class="sr-form-control" type="text"
+                                        placeholder="Enter your full name" required>
+                                </div>
+                                <div class="sr-form-group">
+                                    <label for="sr-mobile-no">Mobile Number</label>
+                                    <input id="sr-mobile-no" class="sr-form-control" type="tel"
+                                        placeholder="Enter your mobile number" required>
+                                </div>
+                            </div>
+
+                            <div class="sr-form-group">
+                                <label for="sr-email-id">Email ID</label>
+                                <input id="sr-email-id" class="sr-form-control" type="email"
+                                    placeholder="Enter your email address" required>
+                            </div>
+
+                            <div class="sr-form-row">
+                                <div class="sr-form-group">
+                                    <label for="sr-agency-name">Agency Name</label>
+                                    <input id="sr-agency-name" class="sr-form-control" type="text"
+                                        placeholder="Enter your agency name">
+                                </div>
+                                <div class="sr-form-group">
+                                    <label for="sr-role">Role</label>
+                                    <select id="sr-role" class="sr-form-control">
+                                        <option value="">Select your role</option>
+                                        <option value="admin">Admin</option>
+                                        <option value="manager">Manager</option>
+                                        <option value="user">User</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="sr-form-row">
+                                <div class="sr-form-group">
+                                    <label for="sr-city">City</label>
+                                    <input id="sr-city" class="sr-form-control" type="text"
+                                        placeholder="Enter your city">
+                                </div>
+                                <div class="sr-form-group">
+                                    <label for="sr-state">State</label>
+                                    <input id="sr-state" class="sr-form-control" type="text"
+                                        placeholder="Enter your state">
+                                </div>
+                            </div>
+
+                            <div class="sr-form-group">
+                                <label for="sr-address">Address</label>
+                                <input id="sr-address" class="sr-form-control" type="text"
+                                    placeholder="Enter your complete address">
+                            </div>
+
+                            <div class="sr-form-row">
+                                <div class="sr-form-group">
+                                    <label for="sr-gst-no">GST No</label>
+                                    <input id="sr-gst-no" class="sr-form-control" type="text"
+                                        placeholder="Enter your GST number">
+                                </div>
+                                <div class="sr-form-group">
+                                    <label for="sr-agency-logo">Agency Logo</label>
+                                    <input id="sr-agency-logo" class="sr-form-control" type="file">
+                                </div>
+                            </div>
+
+                            <div class="sr-form-group">
+                                <label for="sr-payment-proof">Payment Proof</label>
+                                <input id="sr-payment-proof" class="sr-form-control" type="file">
+                            </div>
+
+                            <div class="sr-form-row">
+                                <div class="sr-form-group">
+                                    <label for="sr-reg-password">Password</label>
+                                    <input id="sr-reg-password" class="sr-form-control" type="password"
+                                        placeholder="Create a password" required>
+                                </div>
+                                <div class="sr-form-group">
+                                    <label for="sr-confirm-password">Confirm Password</label>
+                                    <input id="sr-confirm-password" class="sr-form-control" type="password"
+                                        placeholder="Confirm your password" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="sr-btn">Register</button>
+
+                            <div class="sr-toggle-container">
+                                <p>Already have an account? <a id="sr-go-to-login" class="sr-toggle-link">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div> <!-- sr-form -->
+        </div> <!-- sr-container -->
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="./index.html" class="logo">
+                            <i class="fas fa-route"></i> SadiqESafar
+                        </a>
+                        <p>
+                            Streamlining tour and event management for travel agencies worldwide.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="./features.html">Features</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="./about-us.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="./terms-condition.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sadiq E Safar. All rights reserved.</p>
+                <p>Designed And Developed By
+                    <a href="https://jilani.tech/" target="_blank">Jilani Tech</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./action.js"></script>
+    <script>
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const srLoginPane = document.getElementById('sr-login-pane');
+            const srRegisterPane = document.getElementById('sr-register-pane');
+            const srGoToRegister = document.getElementById('sr-go-to-register');
+            const srGoToLogin = document.getElementById('sr-go-to-login');
+            const srLoginForm = document.getElementById('sr-login-form');
+            const srRegisterForm = document.getElementById('sr-register-form');
+            const srContainer = document.getElementById('sr-main-container');
+
+            function showRegister() {
+                // Add a subtle container animation when switching
+                srContainer.style.transform = 'scale(0.98)';
+                srContainer.style.opacity = '0.8';
+
+                setTimeout(() => {
+                    srLoginPane.classList.remove('active');
+                    srRegisterPane.classList.add('active');
+
+                    // Reset container animation
+                    srContainer.style.transform = 'scale(1)';
+                    srContainer.style.opacity = '1';
+
+                    // Scroll to top of form-section when switching
+                    document.querySelector('.sr-form').scrollTop = 0;
+                }, 150);
+            }
+
+            function showLogin() {
+                // Add a subtle container animation when switching
+                srContainer.style.transform = 'scale(0.98)';
+                srContainer.style.opacity = '0.8';
+
+                setTimeout(() => {
+                    srRegisterPane.classList.remove('active');
+                    srLoginPane.classList.add('active');
+
+                    // Reset container animation
+                    srContainer.style.transform = 'scale(1)';
+                    srContainer.style.opacity = '1';
+
+                    // Scroll to top of form-section when switching
+                    document.querySelector('.sr-form').scrollTop = 0;
+                }, 150);
+            }
+
+            srGoToRegister.addEventListener('click', showRegister);
+            srGoToLogin.addEventListener('click', showLogin);
+
+            srLoginForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Add a subtle success animation
+                const btn = this.querySelector('.sr-btn');
+                btn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                btn.style.background = '#4CAF50';
+
+                setTimeout(() => {
+                    btn.innerHTML = 'Login';
+                    btn.style.background = '';
+
+                    // Demo handling
+                    alert('Login successful (demo)');
+                    console.log('login', {
+                        username: document.getElementById('sr-username').value
+                    });
+                }, 1000);
+            });
+
+            srRegisterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const pwd = document.getElementById('sr-reg-password').value;
+                const c = document.getElementById('sr-confirm-password').value;
+                if (pwd !== c) {
+                    // Add error animation
+                    const confirmField = document.getElementById('sr-confirm-password');
+                    confirmField.style.borderColor = '#f44336';
+                    confirmField.style.boxShadow = '0 0 0 4px rgba(244, 67, 54, 0.1)';
+
+                    setTimeout(() => {
+                        confirmField.style.borderColor = '';
+                        confirmField.style.boxShadow = '';
+                    }, 2000);
+
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                // Add a subtle success animation
+                const btn = this.querySelector('.sr-btn');
+                btn.innerHTML = '<i class="fas fa-check"></i> Success!';
+                btn.style.background = '#4CAF50';
+
+                setTimeout(() => {
+                    btn.innerHTML = 'Register';
+                    btn.style.background = '';
+
+                    // Demo handling
+                    alert('Registration successful (demo)');
+                    console.log('register');
+                }, 1000);
+            });
+
+            // Add subtle hover animations to form controls
+            const srFormControls = document.querySelectorAll('.sr-form-control');
+            srFormControls.forEach(control => {
+                control.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-1px)';
+                });
+
+                control.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

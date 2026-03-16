@@ -1,0 +1,218 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    font-size: inherit;
+}
+
+input,
+textarea {
+    -webkit-appearance: none;
+    outline: none !important;
+}
+
+.w-richtext> :first-child {
+    margin-top: 0;
+}
+
+.w-richtext> :last-child {
+    margin-bottom: 0;
+}
+
+section:focus {
+    outline: none;
+}
+
+.u-blur-perf {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.u-no-select {
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.u-rainbow {
+    background-image: conic-gradient(from 180deg at 50% 50%,
+            #ebf6f2 0deg,
+            #e7f3e0 56.3deg,
+            #e5eff8 118.8deg,
+            #fef1d8 176.4deg,
+            #f7f4fa 237.6deg,
+            #f7dbe5 295.2deg,
+            #ebf6f2 360deg);
+}
+
+.cta:hover .cta-bg {
+    opacity: 1;
+}
+
+.cta:hover .cta-bg.cc-dark {
+    opacity: 0.25;
+}
+
+.input:focus~.input-bg,
+.input:hover~.input-bg {
+    opacity: 1;
+}
+
+.cc-cta-banner .input:focus~.input-bg,
+.cc-cta-banner .input:hover~.input-bg {
+    opacity: 0.2;
+}
+
+.modal-wrap.open {
+    display: flex;
+}
+
+.modal-wrap.open .modal {
+    animation: modalIn 0.25s ease-out backwards;
+}
+
+.modal-wrap.open .modal-bg {
+    animation: modalBg 0.2s ease-out backwards;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes modalBg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.nav.open {
+    position: fixed;
+    bottom: 0;
+}
+
+.nav.open .nav-mobile-menu {
+    display: block;
+    animation: menuIn 0.5s ease backwards;
+}
+
+.nav.open .mobile-menu-fade {
+    -webkit-animation: linkFade 0.4s ease backwards;
+    animation: linkFade 0.4s ease backwards;
+    -webkit-animation-delay: var(--delay);
+    animation-delay: var(--delay);
+}
+
+@-webkit-keyframes linkFade {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-5px);
+    }
+
+    to {
+        opacity: auto;
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes linkFade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: auto;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes menuIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .svg-embed.cc-logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .svg-embed.cc-logo-word {
+        width: 98px;
+    }
+
+    .nav-link {
+        font-size: 17px;
+    }
+
+    .eyebrow-pill {
+        font-size: 14px;
+    }
+
+    .home-hero-heading {
+        font-size: 92px;
+    }
+
+    .subheading {
+        font-size: 20px;
+    }
+
+    .heading-m {
+        font-size: 32px;
+    }
+
+    .section-heading {
+        font-size: 64px;
+    }
+}
+
+.faq-header:hover .faq-icon {
+    color: var(--dark-grey);
+}
+
+.bg-backed-by {
+    background: conic-gradient(from 134.58deg at 46.13% 115.28%, #C6F9E6 0deg, #A3C6E6 56.3deg, #C1D9F0 118.8deg, #F8DFB0 176.4deg, #DCC3F7 237.6deg, rgba(163, 198, 230, 0.6) 295.2deg, #C6F9E6 360deg);
+}
+
+.member-photo-wrapper {
+    background: linear-gradient(180deg, rgba(163, 198, 230, 0.3) 0%, rgba(163, 198, 230, 0.05) 100%);
+
+}
+
+
+.nutshell-wrapper {
+    border-radius: 12px;
+    background: conic-gradient(from 134deg at -95% 108.33%,
+            rgba(237, 237, 237, 0.3) 36.34deg,
+            rgba(254, 235, 198, 0.3) 102.11deg,
+            rgba(211, 240, 242, 0.3) 167.88deg,
+            rgba(234, 217, 252, 0.3) 237.87deg,
+            rgba(219, 229, 250, 0.3) 263.17deg,
+            rgba(250, 220, 230, 0.26) 330.57deg)
+}
