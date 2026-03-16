@@ -46,33 +46,38 @@
                 <div class="page-padding">
                     <div class="container">
                         <div class="nav-inner">
-                            <div class="nav-left">
-                                <div class="nav-left">
-                                    <a href="/" class="nav-logo w-inline-block">
-                                        <div class="logo-icon">
-                                            <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120"
-                                                height="80" />
-                                        </div>
-                                    </a>
 
-                                    <div class="nav-menu">
-                                        <a href="/" class="nav-link">Home</a>
-                                        <a href="about-us.html" class="nav-link">About Us</a>
-                                        <a href="features.html" class="nav-link active" aria-current="page">Features</a>
-                                        <a href="pricing.html" class="nav-link">Pricing</a>
-                                        <a href="contact.html" class="nav-link">Contact</a>
+                            <!-- Left Side -->
+                            <div class="nav-left">
+                                <a href="/" class="nav-logo w-inline-block">
+                                    <div class="logo-icon">
+                                        <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120"
+                                            height="80" />
                                     </div>
+                                </a>
+
+                                <div class="nav-menu">
+                                    <a href="/" class="nav-link">Home</a>
+                                    <a href="about-us.html" class="nav-link">About Us</a>
+                                    <a href="features.html" class="nav-link active" aria-current="page">Features</a>
+                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                    <a href="contact.html" class="nav-link">Contact</a>
                                 </div>
                             </div>
 
+                            <!-- Right Side -->
                             <div class="nav-right">
-                                <a openmodal="sign-up" href="#" class="cta cc-nav w-inline-block">
+
+                                <!-- Desktop Only Modal -->
+                                <a openmodal="sign-up" href="#" class="cta cc-nav w-inline-block desktop-only">
                                     <div class="cta-bg u-rainbow u-blur-perf"></div>
                                 </a>
 
+                                <!-- Mobile Hamburger -->
                                 <div class="nav-mobile-btn">
                                     <div class="hamburger_1_wrap">
                                         <div class="hamburger_1_line"></div>
+
                                         <div class="hamburger_embed w-embed">
                                             <style>
                                                 .hamburger_1_wrap {
@@ -87,7 +92,14 @@
                                                 }
 
                                                 .open .hamburger_1_line:last-child {
-                                                    transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3 * 1deg));
+                                                    transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3deg));
+                                                }
+
+                                                /* ✅ Hide CTA on Mobile */
+                                                @media (max-width: 991px) {
+                                                    .desktop-only {
+                                                        display: none !important;
+                                                    }
                                                 }
                                             </style>
                                         </div>
@@ -96,19 +108,21 @@
                                     </div>
                                 </div>
 
-                                <div class="nav-right">
-                                    <a href="contact.html" class="cta cc-nav w-inline-block">
-                                        <div class="cta-bg u-rainbow u-blur-perf"></div>
-                                        <div class="cta-inner">
-                                            <strong>Start Free Trial</strong>
-                                        </div>
-                                    </a>
-                                </div>
+                                <!-- Desktop Only Start Free Trial -->
+                                <a href="contact.html" class="cta cc-nav w-inline-block desktop-only">
+                                    <div class="cta-bg u-rainbow u-blur-perf"></div>
+                                    <div class="cta-inner">
+                                        <strong>Start Free Trial</strong>
+                                    </div>
+                                </a>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- Mobile Menu -->
                 <div class="nav-mobile-menu">
                     <div class="nav-mobile-menu-top"></div>
 
@@ -161,8 +175,8 @@
                                 <div class="features-card cc-green">
                                     <div class="features-card-content">
                                         <div class="feature-icon-wrap">
-                                            <img src="assests/system.png"
-                                                alt="All in One Management Icon" class="feature-icon">
+                                            <img src="assests/system.png" alt="All in One Management Icon"
+                                                class="feature-icon">
                                         </div>
                                         <h3 class="heading-m u-mb-m">All-in-One Management</h3>
                                         <p class="subheading cc-features">
@@ -286,364 +300,371 @@
             </main>
             <footer class="footer">
                 <div class="container">
-
                     <div class="footer-content">
 
-                        <div class="footer-column">
-                            <div class="footer-logo">
-                                <a href="./index.html" class="logo">
-                                    <i class="fas fa-route"></i> SadiqESafar
-                                </a>
-                                <p>
-                                    Streamlining tour and event management for travel agencies worldwide.
-                                </p>
+                        <div class="footer-logo">
+                            <a href="./index.html" class="Jtlogo">
+                                <span class="logo-text">Sadiq E Safar</span>
+                            </a>
+
+                            <p>
+                                Streamlining tour and event management for
+                                travel agencies worldwide.
+                            </p>
+                        </div>
+
+                        <div class="footer-links">
+
+                            <!-- Quick Links -->
+                            <div class="footer-column">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
                             </div>
-                        </div>
 
-                        <div class="footer-column">
-                            <h4>Product</h4>
-                            <ul>
-                                <li><a href="./features.html">Features</a></li>
-                                <li><a href="./pricing.html">Pricing</a></li>
-                            </ul>
-                        </div>
+                            <!-- Product -->
+                            <div class="footer-column">
+                                <h4>Product</h4>
+                                <ul>
+                                    <li><a href="./features.html">Features</a></li>
+                                    <li><a href="./pricing.html">Pricing</a></li>
+                                </ul>
+                            </div>
 
-                        <div class="footer-column">
-                            <h4>Support</h4>
-                            <ul>
-                                <li><a href="./about-us.html">About Us</a></li>
-                                <li><a href="./contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
+                            <!-- Legal -->
+                            <div class="footer-column legal-column">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="./terms-condition.html">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
 
-                        <div class="footer-column">
-                            <h4>Legal</h4>
-                            <ul>
-                                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="./terms-condition.html">Terms of Service</a></li>
-                            </ul>
                         </div>
 
                     </div>
 
                     <div class="footer-bottom">
                         <p>© 2025 Sadiq E Safar. All rights reserved.</p>
-                        <p>Designed And Developed By
+                        <p>
+                            Designed And Developed By
                             <a href="https://jilani.tech/" target="_blank">Jilani Tech</a>
                         </p>
                     </div>
                 </div>
-        </div>
-        </footer>
+            </footer>
 
-        <!-- End Google Tag Manager (noscript) -->
+            <!-- End Google Tag Manager (noscript) -->
 
 
-        <script>
-            const nav = document.querySelector(".nav");
-            document
-                .querySelector(".nav-mobile-btn")
-                .addEventListener("click", function () {
-                    this.x = ((this.x || 0) + 1) % 2;
-                    if (this.x) {
-                        nav.classList.add("open");
-                        document.body.style.overflow = "hidden";
-                    } else {
-                        nav.classList.remove("open");
-                        document.body.style.overflow = "auto";
-                    }
-                });
-            const navLinks = document.querySelectorAll(".mobile-menu-fade");
-            let navDelay = 0;
-            for (let i = 0; i < navLinks.length; i++) {
-                navDelay += 0.05;
-                navLinks[i].style.setProperty("--delay", `${navDelay}s`);
-            }
-        </script>
-
-        <script>
-            let currentModalId;
-            function openModal(modalId) {
-                document.querySelector(modalId).classList.add("open");
-                document.body.style.overflow = "hidden";
-                currentModalId = modalId;
-            }
-            function closeModal() {
-                if (currentModalId) {
-                    document.querySelector(currentModalId).classList.remove("open");
-                    document.body.style.overflow = "auto";
-                    currentModalId = null;
-                }
-            }
-            const modalButtons = document.querySelectorAll("[openModal]");
-            if (modalButtons) {
-                modalButtons.forEach((modalTrigger) => {
-                    modalTrigger.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const modalId = modalTrigger.getAttribute("openModal");
-                        openModal(`[modal=${modalId}]`);
+            <script>
+                const nav = document.querySelector(".nav");
+                document
+                    .querySelector(".nav-mobile-btn")
+                    .addEventListener("click", function () {
+                        this.x = ((this.x || 0) + 1) % 2;
+                        if (this.x) {
+                            nav.classList.add("open");
+                            document.body.style.overflow = "hidden";
+                        } else {
+                            nav.classList.remove("open");
+                            document.body.style.overflow = "auto";
+                        }
                     });
-                });
-                document.querySelectorAll(".modal-close, .modal-bg").forEach((modalClose) => {
-                    modalClose.addEventListener("click", closeModal);
-                });
-                document.addEventListener("keydown", function (e) {
-                    if (e.key === "Escape") {
-                        e.preventDefault();
-                        closeModal();
-                    }
-                });
-            }
+                const navLinks = document.querySelectorAll(".mobile-menu-fade");
+                let navDelay = 0;
+                for (let i = 0; i < navLinks.length; i++) {
+                    navDelay += 0.05;
+                    navLinks[i].style.setProperty("--delay", `${navDelay}s`);
+                }
+            </script>
 
-            function getFbCookies() {
-                const cs = document.cookie.split("; ");
-                return {
-                    fbc: cs.find((x) => x.startsWith("_fbc="))?.split("=")[1] || "",
-                    fbp: cs.find((x) => x.startsWith("_fbp="))?.split("=")[1] || ""
-                };
-            }
-
-            function getUtmParams() {
-                const params = new URLSearchParams(window.location.search);
-                return {
-                    utm_source: params.get("utm_source") || "",
-                    utm_medium: params.get("utm_medium") || "",
-                    utm_campaign: params.get("utm_campaign") || "",
-                    utm_term: params.get("utm_term") || "",
-                    utm_content: params.get("utm_content") || "",
-                    utm_adgroup: params.get("utm_adgroup") || "",
-                    utm_placement: params.get("utm_placement") || ""
-                };
-            }
-
-            document.addEventListener("click", (e) => {
-                const el = e.target.closest(".cta-button-redirect");
-                if (!el) return;
-                e.preventDefault();
-                e.stopPropagation();
-                const base = "https://start.popcorn.space";
-                const url = new URL(base);
-
-                const { fbc, fbp } = getFbCookies();
-                const { utm_source, utm_medium, utm_campaign, utm_term, utm_content, utm_adgroup, utm_placement } = getUtmParams();
-
-                if (fbc) url.searchParams.set("fbc", fbc);
-                if (fbp) url.searchParams.set("fbp", fbp);
-                if (utm_source) url.searchParams.set("utm_source", utm_source);
-                if (utm_medium) url.searchParams.set("utm_medium", utm_medium);
-                if (utm_campaign) url.searchParams.set("utm_campaign", utm_campaign);
-                if (utm_term) url.searchParams.set("utm_term", utm_term);
-                if (utm_content) url.searchParams.set("utm_content", utm_content);
-                if (utm_adgroup) url.searchParams.set("utm_adgroup", utm_adgroup);
-                if (utm_placement) url.searchParams.set("utm_placement", utm_placement);
-
-                const target = el.getAttribute("data-target") || "_blank";
-                window.open(url.toString(), target);
-            });
-
-            function trackButtonByText(buttonText, eventName) {
-                document.body.addEventListener('click', function (event) {
-                    if (event.target && event.target.textContent.trim() === buttonText) {
-                        fbq('track', eventName);
-                        if (window.analytics) {
-                            const { utm_source, utm_medium, utm_campaign, utm_term, utm_content, utm_placement, utm_adgroup } = getUtmParams();
-                            const { fbc, fbp } = getFbCookies();
-                            analytics.track('landing_cta_click', {
-                                button_text: buttonText,
-                                fbc: fbc || undefined,
-                                fbp: fbp || undefined,
-                                utm_source: utm_source || undefined,
-                                utm_medium: utm_medium || undefined,
-                                utm_campaign: utm_campaign || undefined,
-                                utm_term: utm_term || undefined,
-                                utm_content: utm_content || undefined,
-                                utm_adgroup: utm_adgroup || undefined,
-                                utm_placement: utm_placement || undefined,
-                            });
-                        }
-                    }
-                });
-            }
-            // Track 'Sign Up' button clicks
-            trackButtonByText('Sign up', 'Lead');
-
-            // Track 'Heyo! We launched our Alpha!' button clicks
-            trackButtonByText('Now live in Alpha!', 'Lead');
-        </script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
-        <script>
-            const canvas = document.getElementById("mapCanvas");
-            const ctx = canvas.getContext("2d");
-            let animationFrameId;
-            let isAnimating;
-
-            const sparkleProbability = 0.002; // Probability for a new sparkle
-            const dotColor = "#E6ECF1";
-            const sparkleColor = "#CDDFEE";
-            const sparkleDuration = 60; // Duration of the sparkle effect in frames
-            const fadeInDuration = 10;
-            const background = [];
-            const sparkles = [];
-            let cols, rows;
-            let dotRadius = 4;
-            let dotGap = 6; // Gap between dots
-            if (window.innerWidth < 480) {
-                dotRadius = 2;
-                dotGap = 3;
-            }
-
-            function initializeCanvas() {
-                const parent = canvas.parentElement;
-                canvas.style.width = "100%";
-                canvas.style.height = "100%";
-                canvas.width = parent.clientWidth;
-                canvas.height = parent.clientHeight;
-                // Get the DPR and size of the canvas
-                const dpr = window.devicePixelRatio;
-                const rect = canvas.getBoundingClientRect();
-
-                // Set the "actual" size of the canvas
-                canvas.width = rect.width * dpr;
-                canvas.height = rect.height * dpr;
-
-                // Scale the context to ensure correct drawing operations
-                ctx.scale(dpr, dpr);
-
-                // Set the "drawn" size of the canvas
-                canvas.style.width = `${rect.width}px`;
-                canvas.style.height = `${rect.height}px`;
-
-                // Calculate the number of columns and rows
-                cols = Math.floor(rect.width / (dotRadius * 2 + dotGap));
-                rows = Math.floor(rect.height / (dotRadius * 2 + dotGap));
-
-                // Initialize background dots
-                for (let x = 0; x < cols; x++) {
-                    background[x] = [];
-                    for (let y = 0; y < rows; y++) {
-                        background[x][y] = dotColor;
+            <script>
+                let currentModalId;
+                function openModal(modalId) {
+                    document.querySelector(modalId).classList.add("open");
+                    document.body.style.overflow = "hidden";
+                    currentModalId = modalId;
+                }
+                function closeModal() {
+                    if (currentModalId) {
+                        document.querySelector(currentModalId).classList.remove("open");
+                        document.body.style.overflow = "auto";
+                        currentModalId = null;
                     }
                 }
-                drawBackground();
-            }
-            function handleResize() {
+                const modalButtons = document.querySelectorAll("[openModal]");
+                if (modalButtons) {
+                    modalButtons.forEach((modalTrigger) => {
+                        modalTrigger.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            const modalId = modalTrigger.getAttribute("openModal");
+                            openModal(`[modal=${modalId}]`);
+                        });
+                    });
+                    document.querySelectorAll(".modal-close, .modal-bg").forEach((modalClose) => {
+                        modalClose.addEventListener("click", closeModal);
+                    });
+                    document.addEventListener("keydown", function (e) {
+                        if (e.key === "Escape") {
+                            e.preventDefault();
+                            closeModal();
+                        }
+                    });
+                }
+
+                function getFbCookies() {
+                    const cs = document.cookie.split("; ");
+                    return {
+                        fbc: cs.find((x) => x.startsWith("_fbc="))?.split("=")[1] || "",
+                        fbp: cs.find((x) => x.startsWith("_fbp="))?.split("=")[1] || ""
+                    };
+                }
+
+                function getUtmParams() {
+                    const params = new URLSearchParams(window.location.search);
+                    return {
+                        utm_source: params.get("utm_source") || "",
+                        utm_medium: params.get("utm_medium") || "",
+                        utm_campaign: params.get("utm_campaign") || "",
+                        utm_term: params.get("utm_term") || "",
+                        utm_content: params.get("utm_content") || "",
+                        utm_adgroup: params.get("utm_adgroup") || "",
+                        utm_placement: params.get("utm_placement") || ""
+                    };
+                }
+
+                document.addEventListener("click", (e) => {
+                    const el = e.target.closest(".cta-button-redirect");
+                    if (!el) return;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const base = "https://start.popcorn.space";
+                    const url = new URL(base);
+
+                    const { fbc, fbp } = getFbCookies();
+                    const { utm_source, utm_medium, utm_campaign, utm_term, utm_content, utm_adgroup, utm_placement } = getUtmParams();
+
+                    if (fbc) url.searchParams.set("fbc", fbc);
+                    if (fbp) url.searchParams.set("fbp", fbp);
+                    if (utm_source) url.searchParams.set("utm_source", utm_source);
+                    if (utm_medium) url.searchParams.set("utm_medium", utm_medium);
+                    if (utm_campaign) url.searchParams.set("utm_campaign", utm_campaign);
+                    if (utm_term) url.searchParams.set("utm_term", utm_term);
+                    if (utm_content) url.searchParams.set("utm_content", utm_content);
+                    if (utm_adgroup) url.searchParams.set("utm_adgroup", utm_adgroup);
+                    if (utm_placement) url.searchParams.set("utm_placement", utm_placement);
+
+                    const target = el.getAttribute("data-target") || "_blank";
+                    window.open(url.toString(), target);
+                });
+
+                function trackButtonByText(buttonText, eventName) {
+                    document.body.addEventListener('click', function (event) {
+                        if (event.target && event.target.textContent.trim() === buttonText) {
+                            fbq('track', eventName);
+                            if (window.analytics) {
+                                const { utm_source, utm_medium, utm_campaign, utm_term, utm_content, utm_placement, utm_adgroup } = getUtmParams();
+                                const { fbc, fbp } = getFbCookies();
+                                analytics.track('landing_cta_click', {
+                                    button_text: buttonText,
+                                    fbc: fbc || undefined,
+                                    fbp: fbp || undefined,
+                                    utm_source: utm_source || undefined,
+                                    utm_medium: utm_medium || undefined,
+                                    utm_campaign: utm_campaign || undefined,
+                                    utm_term: utm_term || undefined,
+                                    utm_content: utm_content || undefined,
+                                    utm_adgroup: utm_adgroup || undefined,
+                                    utm_placement: utm_placement || undefined,
+                                });
+                            }
+                        }
+                    });
+                }
+                // Track 'Sign Up' button clicks
+                trackButtonByText('Sign up', 'Lead');
+
+                // Track 'Heyo! We launched our Alpha!' button clicks
+                trackButtonByText('Now live in Alpha!', 'Lead');
+            </script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+            <script>
+                const canvas = document.getElementById("mapCanvas");
+                const ctx = canvas.getContext("2d");
+                let animationFrameId;
+                let isAnimating;
+
+                const sparkleProbability = 0.002; // Probability for a new sparkle
+                const dotColor = "#E6ECF1";
+                const sparkleColor = "#CDDFEE";
+                const sparkleDuration = 60; // Duration of the sparkle effect in frames
+                const fadeInDuration = 10;
+                const background = [];
+                const sparkles = [];
+                let cols, rows;
+                let dotRadius = 4;
+                let dotGap = 6; // Gap between dots
+                if (window.innerWidth < 480) {
+                    dotRadius = 2;
+                    dotGap = 3;
+                }
+
+                function initializeCanvas() {
+                    const parent = canvas.parentElement;
+                    canvas.style.width = "100%";
+                    canvas.style.height = "100%";
+                    canvas.width = parent.clientWidth;
+                    canvas.height = parent.clientHeight;
+                    // Get the DPR and size of the canvas
+                    const dpr = window.devicePixelRatio;
+                    const rect = canvas.getBoundingClientRect();
+
+                    // Set the "actual" size of the canvas
+                    canvas.width = rect.width * dpr;
+                    canvas.height = rect.height * dpr;
+
+                    // Scale the context to ensure correct drawing operations
+                    ctx.scale(dpr, dpr);
+
+                    // Set the "drawn" size of the canvas
+                    canvas.style.width = `${rect.width}px`;
+                    canvas.style.height = `${rect.height}px`;
+
+                    // Calculate the number of columns and rows
+                    cols = Math.floor(rect.width / (dotRadius * 2 + dotGap));
+                    rows = Math.floor(rect.height / (dotRadius * 2 + dotGap));
+
+                    // Initialize background dots
+                    for (let x = 0; x < cols; x++) {
+                        background[x] = [];
+                        for (let y = 0; y < rows; y++) {
+                            background[x][y] = dotColor;
+                        }
+                    }
+                    drawBackground();
+                }
+                function handleResize() {
+                    initializeCanvas();
+                }
+
+                function drawBackground() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+                    for (let x = 0; x < cols; x++) {
+                        for (let y = 0; y < rows; y++) {
+                            const offsetX = y % 2 === 0 ? dotRadius + dotGap / 2 : 0;
+                            drawDot(x, y, background[x][y], offsetX);
+                        }
+                    }
+                }
+
+                function drawDot(x, y, color, offsetX = 0) {
+                    ctx.fillStyle = color;
+                    ctx.beginPath();
+                    ctx.arc(
+                        x * (dotRadius * 2 + dotGap) + dotRadius + offsetX,
+                        y * (dotRadius * 2 + dotGap) + dotRadius,
+                        dotRadius,
+                        0,
+                        Math.PI * 2
+                    );
+                    ctx.fill();
+                }
+
+                function animateSparkles() {
+                    // Add new sparkles
+                    for (let x = 0; x < cols; x++) {
+                        for (let y = 0; y < rows; y++) {
+                            if (Math.random() < sparkleProbability) {
+                                sparkles.push({ x, y, opacity: 0, phase: "fadeIn" });
+                            }
+                        }
+                    }
+
+                    const fadeRate = 1 / sparkleDuration;
+                    const fadeInRate = 1 / fadeInDuration;
+
+                    // Update and draw sparkles
+                    for (let i = sparkles.length - 1; i >= 0; i--) {
+                        const sparkle = sparkles[i];
+
+                        if (sparkle.phase === "fadeIn") {
+                            sparkle.opacity += fadeInRate;
+                            if (sparkle.opacity >= 1) {
+                                sparkle.opacity = 1;
+                                sparkle.phase = "fadeOut";
+                            }
+                        } else {
+                            sparkle.opacity -= fadeRate;
+                            if (sparkle.opacity <= 0) {
+                                sparkles.splice(i, 1);
+                                continue;
+                            }
+                        }
+
+                        const offsetX = sparkle.y % 2 === 0 ? dotRadius + dotGap / 2 : 0;
+                        ctx.globalAlpha = sparkle.opacity;
+                        drawDot(sparkle.x, sparkle.y, sparkleColor, offsetX);
+                        ctx.globalAlpha = 1;
+                    }
+                }
+                function animate() {
+                    drawBackground(); // Draw the background
+                    animateSparkles(); // Animate the sparkles
+                    animationFrameId = requestAnimationFrame(animate);
+                }
+
+                // Function to stop animation
+                function stopAnimation() {
+                    cancelAnimationFrame(animationFrameId);
+                }
+
+                // Function to handle intersection changes
+                function handleIntersection(entries) {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            if (!isAnimating) {
+                                isAnimating = true;
+                                animate();
+                            }
+                        } else {
+                            if (isAnimating) {
+                                isAnimating = false;
+                                stopAnimation();
+                            }
+                        }
+                    });
+                }
+
+                const canvasObserver = new IntersectionObserver(handleIntersection, {
+                    threshold: 0,
+                });
+                canvasObserver.observe(canvas);
+
+                // Add event listener for window resize
+                window.addEventListener("resize", handleResize);
                 initializeCanvas();
-            }
 
-            function drawBackground() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-                for (let x = 0; x < cols; x++) {
-                    for (let y = 0; y < rows; y++) {
-                        const offsetX = y % 2 === 0 ? dotRadius + dotGap / 2 : 0;
-                        drawDot(x, y, background[x][y], offsetX);
-                    }
+                const scrollEls = document.querySelectorAll(".scroll-observe");
+                const observerOptions = {
+                    treshold: 0,
+                    rootMargin: "0px 0px -10% 0px",
+                };
+                function scrollObserver(entries) {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+                            entry.target.classList.add("visible");
+                        } else {
+                            entry.target.classList.remove("visible");
+                        }
+                    });
                 }
-            }
+                const observer = new IntersectionObserver(scrollObserver, observerOptions);
+                scrollEls.forEach((scrollEl) => observer.observe(scrollEl));
 
-            function drawDot(x, y, color, offsetX = 0) {
-                ctx.fillStyle = color;
-                ctx.beginPath();
-                ctx.arc(
-                    x * (dotRadius * 2 + dotGap) + dotRadius + offsetX,
-                    y * (dotRadius * 2 + dotGap) + dotRadius,
-                    dotRadius,
-                    0,
-                    Math.PI * 2
-                );
-                ctx.fill();
-            }
-
-            function animateSparkles() {
-                // Add new sparkles
-                for (let x = 0; x < cols; x++) {
-                    for (let y = 0; y < rows; y++) {
-                        if (Math.random() < sparkleProbability) {
-                            sparkles.push({ x, y, opacity: 0, phase: "fadeIn" });
-                        }
-                    }
-                }
-
-                const fadeRate = 1 / sparkleDuration;
-                const fadeInRate = 1 / fadeInDuration;
-
-                // Update and draw sparkles
-                for (let i = sparkles.length - 1; i >= 0; i--) {
-                    const sparkle = sparkles[i];
-
-                    if (sparkle.phase === "fadeIn") {
-                        sparkle.opacity += fadeInRate;
-                        if (sparkle.opacity >= 1) {
-                            sparkle.opacity = 1;
-                            sparkle.phase = "fadeOut";
-                        }
-                    } else {
-                        sparkle.opacity -= fadeRate;
-                        if (sparkle.opacity <= 0) {
-                            sparkles.splice(i, 1);
-                            continue;
-                        }
-                    }
-
-                    const offsetX = sparkle.y % 2 === 0 ? dotRadius + dotGap / 2 : 0;
-                    ctx.globalAlpha = sparkle.opacity;
-                    drawDot(sparkle.x, sparkle.y, sparkleColor, offsetX);
-                    ctx.globalAlpha = 1;
-                }
-            }
-            function animate() {
-                drawBackground(); // Draw the background
-                animateSparkles(); // Animate the sparkles
-                animationFrameId = requestAnimationFrame(animate);
-            }
-
-            // Function to stop animation
-            function stopAnimation() {
-                cancelAnimationFrame(animationFrameId);
-            }
-
-            // Function to handle intersection changes
-            function handleIntersection(entries) {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        if (!isAnimating) {
-                            isAnimating = true;
-                            animate();
-                        }
-                    } else {
-                        if (isAnimating) {
-                            isAnimating = false;
-                            stopAnimation();
-                        }
-                    }
-                });
-            }
-
-            const canvasObserver = new IntersectionObserver(handleIntersection, {
-                threshold: 0,
-            });
-            canvasObserver.observe(canvas);
-
-            // Add event listener for window resize
-            window.addEventListener("resize", handleResize);
-            initializeCanvas();
-
-            const scrollEls = document.querySelectorAll(".scroll-observe");
-            const observerOptions = {
-                treshold: 0,
-                rootMargin: "0px 0px -10% 0px",
-            };
-            function scrollObserver(entries) {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
-                        entry.target.classList.add("visible");
-                    } else {
-                        entry.target.classList.remove("visible");
-                    }
-                });
-            }
-            const observer = new IntersectionObserver(scrollObserver, observerOptions);
-            scrollEls.forEach((scrollEl) => observer.observe(scrollEl));
-
-        </script>
+            </script>
 </body>
 
 </html>

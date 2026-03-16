@@ -47,32 +47,37 @@
         <div class="page-padding">
             <div class="container">
                 <div class="nav-inner">
-                    <div class="nav-left">
-                        <div class="nav-left">
-                            <a href="/" class="nav-logo w-inline-block">
-                                <div class="logo-icon">
-                                    <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120" height="80" />
-                                </div>
-                            </a>
 
-                            <div class="nav-menu">
-                                <a href="/" class="nav-link">Home</a>
-                                <a href="about-us.html" class="nav-link">About Us</a>
-                                <a href="features.html" class="nav-link">Features</a>
-                                <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
-                                <a href="contact.html" class="nav-link">Contact</a>
+                    <!-- LEFT SIDE -->
+                    <div class="nav-left">
+                        <a href="/" class="nav-logo w-inline-block">
+                            <div class="logo-icon">
+                                <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120" height="80" />
                             </div>
+                        </a>
+
+                        <div class="nav-menu">
+                            <a href="/" class="nav-link">Home</a>
+                            <a href="about-us.html" class="nav-link">About Us</a>
+                            <a href="features.html" class="nav-link">Features</a>
+                            <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
                         </div>
                     </div>
 
+                    <!-- RIGHT SIDE -->
                     <div class="nav-right">
-                        <a openmodal="sign-up" href="#" class="cta cc-nav w-inline-block">
+
+                        <!-- Desktop Only Modal -->
+                        <a openmodal="sign-up" href="#" class="cta cc-nav w-inline-block desktop-only">
                             <div class="cta-bg u-rainbow u-blur-perf"></div>
                         </a>
 
+                        <!-- Mobile Hamburger -->
                         <div class="nav-mobile-btn">
                             <div class="hamburger_1_wrap">
                                 <div class="hamburger_1_line"></div>
+
                                 <div class="hamburger_embed w-embed">
                                     <style>
                                         .hamburger_1_wrap {
@@ -87,7 +92,14 @@
                                         }
 
                                         .open .hamburger_1_line:last-child {
-                                            transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3 * 1deg));
+                                            transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3deg));
+                                        }
+
+                                        /* Hide Desktop Buttons on Mobile */
+                                        @media (max-width: 991px) {
+                                            .desktop-only {
+                                                display: none !important;
+                                            }
                                         }
                                     </style>
                                 </div>
@@ -96,27 +108,28 @@
                             </div>
                         </div>
 
-                        <div class="nav-right">
-                            <a href="contact.html" class="cta cc-nav w-inline-block">
-                                <div class="cta-bg u-rainbow u-blur-perf"></div>
-                                <div class="cta-inner">
-                                    <strong>Start Free Trial</strong>
-                                </div>
-                            </a>
+                        <!-- Desktop Only Buttons -->
+                        <a href="contact.html" class="cta cc-nav w-inline-block desktop-only">
+                            <div class="cta-bg u-rainbow u-blur-perf"></div>
+                            <div class="cta-inner">
+                                <strong>Start Free Trial</strong>
+                            </div>
+                        </a>
 
-                            <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
-                                class="cta cc-nav w-inline-block">
-                                <div class="cta-bg u-rainbow u-blur-perf"></div>
-                                <div class="cta-inner">
-                                    <strong>Login/ Register</strong>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
+                            class="cta cc-nav w-inline-block desktop-only">
+                            <div class="cta-bg u-rainbow u-blur-perf"></div>
+                            <div class="cta-inner">
+                                <strong>Login / Register</strong>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- MOBILE MENU -->
         <div class="nav-mobile-menu">
             <div class="nav-mobile-menu-top"></div>
 
@@ -491,87 +504,105 @@
                 </div>
             </div>
         </div>
+        <div class="jt-trust-badges">
 
-        <!-- Trust Badges -->
-        <div class="trust-badges">
-            <div class="trust-badge">
-                <div class="badge-icon">
+            <div class="jt-trust-badge">
+                <div class="jt-badge-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <div class="badge-text">Secure Payments</div>
-                <div class="badge-desc">All transactions are encrypted and secure</div>
+                <div class="jt-badge-content">
+                    <div class="jt-badge-text">Secure Payments</div>
+                    <div class="jt-badge-desc">
+                        All transactions are encrypted and secure
+                    </div>
+                </div>
             </div>
 
-            <div class="trust-badge">
-                <div class="badge-icon">
+            <div class="jt-trust-badge">
+                <div class="jt-badge-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <div class="badge-text">24/7 Support</div>
-                <div class="badge-desc">Dedicated support team always available</div>
+                <div class="jt-badge-content">
+                    <div class="jt-badge-text">24/7 Support</div>
+                    <div class="jt-badge-desc">
+                        Dedicated support team always available
+                    </div>
+                </div>
             </div>
-            <div class="trust-badge">
-                <div class="badge-icon">
+
+            <div class="jt-trust-badge">
+                <div class="jt-badge-icon">
                     <i class="fas fa-sync"></i>
                 </div>
-                <div class="badge-text">Privacy Protection</div>
-                <div class="badge-desc">We Respect and Protect Our Customers’ Privacy</div>
+                <div class="jt-badge-content">
+                    <div class="jt-badge-text">Privacy Protection</div>
+                    <div class="jt-badge-desc">
+                        We Respect and Protect Our Customers’ Privacy
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
 
 
-
-
     <footer class="footer">
         <div class="container">
-
             <div class="footer-content">
 
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <a href="./index.html" class="logo">
-                            <i class="fas fa-route"></i> SadiqESafar
-                        </a>
-                        <p>
-                            Streamlining tour and event management for travel agencies worldwide.
-                        </p>
+                <div class="footer-logo">
+                    <a href="./index.html" class="Jtlogo">
+                        <span class="logo-text">Sadiq E Safar</span>
+                    </a>
+
+                    <p>
+                        Streamlining tour and event management for
+                        travel agencies worldwide.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="footer-column">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="./features.html">Features</a></li>
-                        <li><a href="./pricing.html">Pricing</a></li>
-                    </ul>
-                </div>
+                    <!-- Product -->
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="./features.html">Features</a></li>
+                            <li><a href="./pricing.html">Pricing</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-column">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="./about-us.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
+                    <!-- Legal -->
+                    <div class="footer-column legal-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="./terms-condition.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="./terms-condition.html">Terms of Service</a></li>
-                    </ul>
                 </div>
 
             </div>
 
             <div class="footer-bottom">
                 <p>© 2025 Sadiq E Safar. All rights reserved.</p>
-                <p>Designed And Developed By
+                <p>
+                    Designed And Developed By
                     <a href="https://jilani.tech/" target="_blank">Jilani Tech</a>
                 </p>
             </div>
-
         </div>
     </footer>
 

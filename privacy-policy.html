@@ -45,452 +45,452 @@
 
 <body>
 
-    <nav class="nav">
-        <div class="page-padding">
-            <div class="container">
-                <div class="nav-inner">
-                    <div class="nav-left">
-                        <div class="nav-left">
-                            <a href="/" class="nav-logo w-inline-block">
-                                <div class="logo-icon">
-                                    <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120" height="80" />
-                                </div>
-                            </a>
+    <div class="page-wrapper">
+        <div class="w-embed">
+            <nav class="nav">
+                <div class="page-padding">
+                    <div class="container">
+                        <div class="nav-inner">
+                            <div class="nav-left">
+                                <a href="/" class="nav-logo w-inline-block">
+                                    <div class="logo-icon">
+                                        <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" width="120"
+                                            height="80" />
+                                    </div>
+                                </a>
 
-                            <div class="nav-menu">
-                                <a href="/" class="nav-link">Home</a>
-                                <a href="about-us.html" class="nav-link">About Us</a>
-                                <a href="features.html" class="nav-link">Features</a>
-                                <a href="pricing.html" class="nav-link">Pricing</a>
-                                <a href="contact.html" class="nav-link">Contact</a>
+                                <div class="nav-menu">
+                                    <a href="/" class="nav-link active" aria-current="page">Home</a>
+                                    <a href="about-us.html" class="nav-link">About Us</a>
+                                    <a href="features.html" class="nav-link">Features</a>
+                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </div>
+                            </div>
+
+                            <div class="nav-right">
+                                <div class="nav-mobile-btn">
+                                    <div class="hamburger_1_wrap">
+                                        <div class="hamburger_1_line"></div>
+                                        <div class="hamburger_embed w-embed">
+                                            <style>
+                                                .hamburger_1_wrap {
+                                                    --thickness: 2px;
+                                                    --gap: 6px;
+                                                    --rotate: 45;
+                                                    --width: 100%;
+                                                }
+
+                                                .open .hamburger_1_line:first-child {
+                                                    transform: translateY(calc(var(--thickness) * 0.5 + var(--gap) * 0.5)) rotate(calc(var(--rotate) * 1deg));
+                                                }
+
+                                                .open .hamburger_1_line:last-child {
+                                                    transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3 * 1deg));
+                                                }
+
+                                                /* ✅ Mobile par buttons hide */
+                                                @media (max-width: 991px) {
+                                                    .desktop-only {
+                                                        display: none !important;
+                                                    }
+                                                }
+                                            </style>
+                                        </div>
+                                        <div class="hamburger_1_line"></div>
+                                    </div>
+                                </div>
+
+                                <!-- ✅ Desktop Only Buttons -->
+                                <a href="contact.html" class="cta cc-nav w-inline-block desktop-only">
+                                    <div class="cta-bg u-rainbow u-blur-perf"></div>
+                                    <div class="cta-inner">
+                                        <strong>Start Free Trial</strong>
+                                    </div>
+                                </a>
+
+                                <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
+                                    class="cta cc-nav w-inline-block desktop-only">
+                                    <div class="cta-bg u-rainbow u-blur-perf"></div>
+                                    <div class="cta-inner">
+                                        <strong>Login / Register</strong>
+                                    </div>
+                                </a>
+
                             </div>
                         </div>
                     </div>
-
-                    <div class="nav-right">
-                        <a openmodal="sign-up" href="#" class="cta cc-nav w-inline-block">
-                            <div class="cta-bg u-rainbow u-blur-perf"></div>
-                        </a>
-
-                        <div class="nav-mobile-btn">
-                            <div class="hamburger_1_wrap">
-                                <div class="hamburger_1_line"></div>
-                                <div class="hamburger_embed w-embed">
-                                    <style>
-                                        .hamburger_1_wrap {
-                                            --thickness: 2px;
-                                            --gap: 6px;
-                                            --rotate: 45;
-                                            --width: 100%;
-                                        }
-
-                                        .open .hamburger_1_line:first-child {
-                                            transform: translateY(calc(var(--thickness) * 0.5 + var(--gap) * 0.5)) rotate(calc(var(--rotate) * 1deg));
-                                        }
-
-                                        .open .hamburger_1_line:last-child {
-                                            transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3 * 1deg));
-                                        }
-                                    </style>
-                                </div>
-
-                                <div class="hamburger_1_line"></div>
-                            </div>
-                        </div>
-
-                        <div class="nav-right">
-                            <!-- Sign Up Button -->
-                            <a href="/signup.html" class="cta cc-nav w-inline-block">
-                                <div class="cta-bg u-rainbow u-blur-perf"></div>
-                                <div class="cta-inner">
-                                    <strong>Start Free Trial</strong>
-                                </div>
-                            </a>
-
-                            <!-- New Login Button -->
-                            <a href="/login-register.html" class="cta cc-nav secondary-btn w-inline-block">
-                                <div class="cta-inner">
-                                    <strong>Login/ Register</strong>
-                                </div>
-                            </a>
-
-                            <div class="nav-mobile-btn">
-                                <div class="hamburger_1_wrap">
-                                    <div class="hamburger_1_line"></div>
-                                    <div class="hamburger_1_line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /nav-right -->
                 </div>
-            </div>
-        </div>
 
-        <div class="nav-mobile-menu">
-            <div class="nav-mobile-menu-top"></div>
+                <div class="nav-mobile-menu">
+                    <div class="nav-mobile-menu-top"></div>
 
-            <div class="page-padding">
+                    <div class="page-padding">
+                        <div class="container">
+                            <div class="mobile-menu-inner">
+                                <div class="mobile-menu-fade" style="--delay: 0.05s;">
+                                    <a href="/" class="nav-mobile-link active w--current" aria-current="page">Home</a>
+                                </div>
+
+                                <div class="mobile-menu-fade" style="--delay: 0.1s;">
+                                    <a href="about-us.html" class="nav-mobile-link">About Us</a>
+                                </div>
+
+                                <div class="mobile-menu-fade" style="--delay: 0.15s;">
+                                    <a href="features.html" class="nav-mobile-link">Features</a>
+                                </div>
+
+                                <div class="mobile-menu-fade" style="--delay: 0.2s;">
+                                    <a href="pricing.html" class="nav-mobile-link">Pricing</a>
+                                </div>
+
+                                <div class="mobile-menu-fade" style="--delay: 0.25s;">
+                                    <a href="contact.html" class="nav-mobile-link">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="privacy-section" id="privacy">
+                <div class="privacy-header">
+                    <h1>Privacy Policy</h1><br>
+                    <div class="effective-date">Effective Date: 05/10/2025</div>
+                </div>
+
+                <div class="privacy-content">
+                    <nav class="privacy-nav">
+                        <h3>Policy Sections</h3>
+                        <ul class="nav-links-policy">
+                            <li><a href="#intro" class="active"><i class="fas fa-info-circle"></i> Introduction</a></li>
+                            <li><a href="#about" class=""><i class="fas fa-building"></i> About Us</a></li>
+                            <li><a href="#info-collected" class=""><i class="fas fa-database"></i> Information
+                                    Collected</a>
+                            </li>
+                            <li><a href="#info-use" class=""><i class="fas fa-cogs"></i> How We Use Information</a></li>
+                            <li><a href="#info-sharing" class=""><i class="fas fa-share-alt"></i> Information
+                                    Sharing</a></li>
+                            <li><a href="#data-security" class=""><i class="fas fa-shield-alt"></i> Data Security</a>
+                            </li>
+                            <li><a href="#data-retention" class=""><i class="fas fa-archive"></i> Data Retention</a>
+                            </li>
+                            <li><a href="#your-rights" class=""><i class="fas fa-user-check"></i> Your Rights</a></li>
+                            <li><a href="#international" class=""><i class="fas fa-globe"></i> International
+                                    Transfers</a></li>
+                            <li><a href="#children" class=""><i class="fas fa-child"></i> Children's Privacy</a></li>
+                            <li><a href="#third-party" class=""><i class="fas fa-external-link-alt"></i> Third-Party
+                                    Links</a>
+                            </li>
+                            <li><a href="#policy-changes" class=""><i class="fas fa-sync-alt"></i> Policy Changes</a>
+                            </li>
+                            <li><a href="#contact" class=""><i class="fas fa-envelope"></i> Contact Us</a></li>
+                            <li><a href="#refund-policy" class=""><i class="fas fa-envelope"></i> Refund Policy</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="policy-content">
+                        <div class="policy-intro" id="intro">
+                            <p>Welcome to Sadiq E Safar. Your privacy is important to us, and we are committed to
+                                safeguarding
+                                the personal information you share with us. This Privacy Policy explains how we collect,
+                                use,
+                                store, and protect your information when you use our services. Please read it carefully
+                                so you
+                                understand your rights and our responsibilities.</p>
+                            <p>By using Sadiq E Safar, you agree to the terms outlined in this Privacy Policy. If you do
+                                not
+                                agree, you should stop using our services immediately.</p>
+                        </div>
+
+                        <div class="policy-section" id="about">
+                            <h2><i class="fas fa-building"></i> 1. About Sadiq E Safar</h2>
+                            <p>Sadiq E Safar is a Software-as-a-Service (SaaS) platform designed to streamline business
+                                travel
+                                management, enhance collaboration, and provide actionable insights.</p>
+                            <p>Because our service involves handling sensitive data, we treat the confidentiality and
+                                security
+                                of your personal information as a top priority.</p>
+                        </div>
+
+                        <div class="policy-section" id="info-collected">
+                            <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+                            <p>When you use our services, we may collect the following types of information:</p>
+
+                            <h3>a. Personal Information</h3>
+                            <ul>
+                                <li>Name, email address, phone number, billing details.</li>
+                                <li>Account login credentials (encrypted).</li>
+                                <li>Identity verification details, if applicable.</li>
+                            </ul>
+
+                            <h3>b. Usage Data</h3>
+                            <ul>
+                                <li>Log data such as IP address, browser type, device information, and access times.
+                                </li>
+                                <li>Pages visited, actions taken, and features used on our platform.</li>
+                            </ul>
+
+                            <h3>c. Transaction Information</h3>
+                            <ul>
+                                <li>Payment method details (processed securely by third-party providers).</li>
+                                <li>Subscription history, invoices, and receipts.</li>
+                            </ul>
+
+                            <h3>d. Cookies &amp; Tracking Technologies</h3>
+                            <p>We use cookies and similar technologies to:</p>
+                            <ul>
+                                <li>Keep you logged in.</li>
+                                <li>Remember your preferences.</li>
+                                <li>Analyze site traffic and performance.</li>
+                            </ul>
+                            <p>You can manage or disable cookies in your browser settings, though some features may stop
+                                working
+                                correctly.</p>
+                        </div>
+
+                        <div class="policy-section" id="info-use">
+                            <h2><i class="fas fa-cogs"></i> 3. How We Use Your Information</h2>
+                            <p>We use the data collected for the following purposes:</p>
+                            <ul>
+                                <li><strong>Service Delivery</strong> – To provide and maintain the Sadiq E Safar
+                                    platform.</li>
+                                <li><strong>Account Management</strong> – To create, manage, and update user profiles.
+                                </li>
+                                <li><strong>Customer Support</strong> – To respond to inquiries, troubleshoot, and
+                                    resolve
+                                    issues.</li>
+                                <li><strong>Billing &amp; Payments</strong> – To process transactions securely.</li>
+                                <li><strong>Service Improvement</strong> – To analyze trends and improve features.</li>
+                                <li><strong>Legal Compliance</strong> – To comply with applicable laws and prevent fraud
+                                    or
+                                    abuse.</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <p><strong>We will never sell your data to third parties.</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="policy-section" id="info-sharing">
+                            <h2><i class="fas fa-share-alt"></i> 4. How We Share Information</h2>
+                            <p>We only share your information under the following circumstances:</p>
+                            <ul>
+                                <li><strong>Service Providers:</strong> With trusted vendors who perform services such
+                                    as
+                                    payment processing, cloud hosting, analytics, or customer support.</li>
+                                <li><strong>Legal Obligations:</strong> When required by law, regulation, or legal
+                                    process.</li>
+                                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale
+                                    of
+                                    assets, your data may be transferred as part of the business.</li>
+                                <li><strong>With Consent:</strong> We may share data for other purposes if you
+                                    explicitly agree.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="policy-section" id="data-security">
+                            <h2><i class="fas fa-shield-alt"></i> 5. Data Security</h2>
+                            <p>We implement strong safeguards to protect your data, including:</p>
+                            <ul>
+                                <li>End-to-end encryption in transit (HTTPS/SSL).</li>
+                                <li>Encrypted storage of sensitive information.</li>
+                                <li>Regular system audits and penetration testing.</li>
+                                <li>Strict access controls for staff.</li>
+                            </ul>
+                            <p>While we use best practices, no method of storage or transmission is 100% secure. We
+                                encourage
+                                you to also protect your account with a strong password.</p>
+                        </div>
+
+                        <div class="policy-section" id="data-retention">
+                            <h2><i class="fas fa-archive"></i> 6. Data Retention</h2>
+                            <p>We keep your personal information only as long as necessary for the purposes described in
+                                this
+                                policy, or as required by law. Once your account is deleted, we will securely erase or
+                                anonymize
+                                your data unless retention is legally required.</p>
+                        </div>
+
+                        <div class="policy-section" id="your-rights">
+                            <h2><i class="fas fa-user-check"></i> 7. Your Rights</h2>
+                            <p>Depending on your location, you may have the following rights:</p>
+                            <ul>
+                                <li><strong>Access:</strong> Request a copy of your personal data.</li>
+                                <li><strong>Correction:</strong> Ask us to update or fix inaccuracies.</li>
+                                <li><strong>Deletion:</strong> Request that we delete your data.</li>
+                                <li><strong>Restriction:</strong> Limit how we process your information.</li>
+                                <li><strong>Portability:</strong> Obtain your data in a portable format.</li>
+                                <li><strong>Opt-Out:</strong> Withdraw consent for marketing communications.</li>
+                            </ul>
+                            <p>To exercise these rights, contact us at <strong>sadiqesafar@gmail.com</strong>.</p>
+                        </div>
+
+                        <div class="policy-section" id="international">
+                            <h2><i class="fas fa-globe"></i> 8. International Data Transfers</h2>
+                            <p>As a global service, we may transfer your information across borders. Whenever we
+                                transfer data
+                                outside your country, we ensure adequate safeguards are in place, such as standard
+                                contractual
+                                clauses or equivalent legal mechanisms.</p>
+                        </div>
+
+                        <div class="policy-section" id="children">
+                            <h2><i class="fas fa-child"></i> 9. Children's Privacy</h2>
+                            <p>Sadiq E Safar is not intended for children under the age of 16. We do not knowingly
+                                collect data
+                                from minors. If you believe we have unintentionally collected such data, please contact
+                                us, and
+                                we will delete it promptly.</p>
+                        </div>
+
+                        <div class="policy-section" id="third-party">
+                            <h2><i class="fas fa-external-link-alt"></i> 10. Third-Party Links &amp; Services</h2>
+                            <p>Our platform may contain links to third-party websites or services. Please note that we
+                                are not
+                                responsible for the privacy practices of those third parties. We recommend reviewing
+                                their
+                                policies before sharing your information.</p>
+                        </div>
+
+                        <div class="policy-section" id="policy-changes">
+                            <h2><i class="fas fa-sync-alt"></i> 11. Changes to This Policy</h2>
+                            <p>We may update this Privacy Policy from time to time. Changes will be effective when
+                                posted on
+                                this page, with the "Effective Date" updated accordingly. If changes are significant, we
+                                will
+                                notify you via email or in-app alert.</p>
+                        </div>
+
+                        <div class="policy-section" id="contact">
+                            <h2><i class="fas fa-envelope"></i> 12. Contact Us</h2>
+                            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please
+                                reach out:
+                            </p>
+
+                            <div class="contact-info">
+                                <h3 style="color: white;">Get In Touch</h3>
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:sadiqesafar@gmail.com">sadiqesafar@gmail.com</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-globe"></i>
+                                        <a href="https://sadiqesafar.com/">sadiqesafar.com</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <a href="">Ahmedabad, Gujarat, India</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="policy-section" id="refund-policy">
+                            <h2><i class="fas fa-sync-alt"></i> 13. Refund Policy</h2>
+                            <p>Refund Policy - If any Refund approved by the company it will take 7 working days to
+                                credit to
+                                your original source account</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="back-to-top" id="backToTop">
+                    <i class="fas fa-chevron-up"></i>
+                </a>
+            </section>
+
+            <footer class="footer">
                 <div class="container">
-                    <div class="mobile-menu-inner">
-                        <div class="mobile-menu-fade" style="--delay: 0.05s;">
-                            <a href="/" aria-current="page" class="nav-mobile-link w--current">Home</a>
+                    <div class="footer-content">
+
+                        <div class="footer-logo">
+                            <a href="./index.html" class="Jtlogo">
+                                <span class="logo-text">Sadiq E Safar</span>
+                            </a>
+
+                            <p>
+                                Streamlining tour and event management for
+                                travel agencies worldwide.
+                            </p>
                         </div>
 
-                        <div class="mobile-menu-fade" style="--delay: 0.1s;">
-                            <a href="/manifesto" class="nav-mobile-link">Manifesto</a>
-                        </div>
+                        <div class="footer-links">
 
-                        <div class="mobile-menu-fade" style="--delay: 0.15000000000000002s;">
-                            <a href="/research" class="nav-mobile-link">Research</a>
-                        </div>
-
-                        <div class="mobile-menu-fade" style="--delay: 0.2s;">
-                            <a href="/careers" class="nav-mobile-link">Careers</a>
-                        </div>
-
-                        <div class="mobile-menu-fade" style="--delay: 0.25s;">
-                            <img src="https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/672b42c77665b57b126cc6bc_mobile-menu-divider.png"
-                                loading="lazy" width="251" height="13" alt="" srcset="
-                        https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/672b42c77665b57b126cc6bc_mobile-menu-divider-p-500.png 500w,
-                        https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/672b42c77665b57b126cc6bc_mobile-menu-divider.png       502w
-                      " sizes="251px" class="mobile-menu-divider" />
-
-                            <a href="/terms" class="nav-mobile-link cc-small">Terms of Use</a>
-                            <a href="/rules" class="nav-mobile-link cc-small">Play by the Rules</a>
-
-                            <a href="https://start.popcorn.space/" target="_blank"
-                                class="cta-inner cta-button-redirect w-button">Sign up</a>
-
-                            <div class="mobile-menu-social-wrap">
-                                <a href="https://x.com/onpopcorn_" target="_blank" class="icon-wrap w-inline-block">
-                                    <div class="icon-inner">
-                                        <div class="svg-embed w-embed">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.8442 15.1515L4.4085 22.5H0.84375L9.17925 12.978L10.8442 15.1515Z"
-                                                    fill="#212121"></path>
-                                                <path
-                                                    d="M12.7891 8.241L18.6818 1.5H22.2443L14.4391 10.4265L12.7891 8.241Z"
-                                                    fill="#212121"></path>
-                                                <path
-                                                    d="M23.6168 22.5H16.4475L0.384766 1.5H7.73552L23.6168 22.5ZM17.4308 20.3677H19.4048L6.66302 3.5205H4.54502L17.4308 20.3677Z"
-                                                    fill="#212121"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="icon-bg u-rainbow u-blur-perf"></div>
-                                </a>
-
-                                <a href="https://www.instagram.com/onpopcorn/" target="_blank"
-                                    class="icon-wrap w-inline-block">
-                                    <div class="icon-inner">
-                                        <div class="svg-embed w-embed">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12 2.982C14.937 2.982 15.285 2.993 16.445 3.046C17.1424 3.05412 17.8331 3.18233 18.487 3.425C18.965 3.60111 19.3973 3.88237 19.752 4.248C20.1176 4.60269 20.3989 5.035 20.575 5.513C20.8177 6.16685 20.9459 6.85762 20.954 7.555C21.007 8.715 21.018 9.063 21.018 12C21.018 14.937 21.007 15.285 20.954 16.445C20.9459 17.1424 20.8177 17.8331 20.575 18.487C20.3919 18.9615 20.1116 19.3924 19.752 19.752C19.3924 20.1116 18.9615 20.3919 18.487 20.575C17.8331 20.8177 17.1424 20.9459 16.445 20.954C15.285 21.007 14.937 21.018 12 21.018C9.063 21.018 8.715 21.007 7.555 20.954C6.85762 20.9459 6.16685 20.8177 5.513 20.575C5.035 20.3989 4.60269 20.1176 4.248 19.752C3.88237 19.3973 3.60111 18.965 3.425 18.487C3.18233 17.8331 3.05412 17.1424 3.046 16.445C2.993 15.285 2.982 14.937 2.982 12C2.982 9.063 2.993 8.715 3.046 7.555C3.05412 6.85762 3.18233 6.16685 3.425 5.513C3.60111 5.035 3.88237 4.60269 4.248 4.248C4.60269 3.88237 5.035 3.60111 5.513 3.425C6.16685 3.18233 6.85762 3.05412 7.555 3.046C8.715 2.993 9.063 2.982 12 2.982ZM12 1C9.013 1 8.638 1.013 7.465 1.066C6.55258 1.08486 5.6499 1.25762 4.795 1.577C4.06355 1.86017 3.3994 2.29319 2.84521 2.84824C2.29102 3.40329 1.85904 4.06811 1.577 4.8C1.25762 5.6549 1.08486 6.55758 1.066 7.47C1.013 8.638 1 9.013 1 12C1 14.987 1.013 15.362 1.066 16.535C1.08486 17.4474 1.25762 18.3501 1.577 19.205C1.86017 19.9365 2.29319 20.6006 2.84824 21.1548C3.40329 21.709 4.06811 22.141 4.8 22.423C5.6549 22.7424 6.55758 22.9151 7.47 22.934C8.638 22.987 9.013 23 12 23C14.987 23 15.362 22.987 16.535 22.934C17.4474 22.9151 18.3501 22.7424 19.205 22.423C19.9365 22.1398 20.6006 21.7068 21.1548 21.1518C21.709 20.5967 22.141 19.9319 22.423 19.2C22.7424 18.3451 22.9151 17.4424 22.934 16.53C22.987 15.362 23 14.987 23 12C23 9.013 22.987 8.638 22.934 7.465C22.9151 6.55258 22.7424 5.6499 22.423 4.795C22.1398 4.06355 21.7068 3.3994 21.1518 2.84521C20.5967 2.29102 19.9319 1.85904 19.2 1.577C18.3451 1.25762 17.4424 1.08486 16.53 1.066C15.362 1.013 14.987 1 12 1Z"
-                                                    fill="#212121"></path>
-                                                <path
-                                                    d="M12.0006 6.35107C10.8833 6.35107 9.79112 6.68238 8.86215 7.3031C7.93318 7.92382 7.20913 8.80608 6.78157 9.8383C6.35401 10.8705 6.24214 12.0063 6.46011 13.1021C6.67808 14.1979 7.21609 15.2045 8.00612 15.9945C8.79615 16.7845 9.8027 17.3226 10.8985 17.5405C11.9943 17.7585 13.1301 17.6466 14.1623 17.2191C15.1946 16.7915 16.0768 16.0675 16.6975 15.1385C17.3183 14.2095 17.6496 13.1173 17.6496 12.0001C17.6496 10.5019 17.0544 9.06502 15.995 8.00563C14.9356 6.94624 13.4988 6.35107 12.0006 6.35107ZM12.0006 15.6671C11.2753 15.6671 10.5663 15.452 9.96329 15.0491C9.36025 14.6461 8.89025 14.0734 8.6127 13.4034C8.33515 12.7333 8.26253 11.996 8.40403 11.2847C8.54552 10.5734 8.89477 9.91995 9.4076 9.40711C9.92044 8.89427 10.5738 8.54503 11.2852 8.40353C11.9965 8.26204 12.7338 8.33466 13.4039 8.61221C14.0739 8.88975 14.6466 9.35976 15.0496 9.9628C15.4525 10.5658 15.6676 11.2748 15.6676 12.0001C15.6676 12.9726 15.2812 13.9053 14.5935 14.593C13.9058 15.2807 12.9731 15.6671 12.0006 15.6671Z"
-                                                    fill="#212121"></path>
-                                                <path
-                                                    d="M17.8727 7.44811C18.6017 7.44811 19.1927 6.85712 19.1927 6.12811C19.1927 5.39909 18.6017 4.80811 17.8727 4.80811C17.1437 4.80811 16.5527 5.39909 16.5527 6.12811C16.5527 6.85712 17.1437 7.44811 17.8727 7.44811Z"
-                                                    fill="#212121"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="icon-bg u-rainbow u-blur-perf"></div>
-                                </a>
+                            <!-- Quick Links -->
+                            <div class="footer-column">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
                             </div>
+
+                            <!-- Product -->
+                            <div class="footer-column">
+                                <h4>Product</h4>
+                                <ul>
+                                    <li><a href="./features.html">Features</a></li>
+                                    <li><a href="./pricing.html">Pricing</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Legal -->
+                            <div class="footer-column legal-column">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="./terms-condition.html">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+
                         </div>
+
                     </div>
-                    <!-- /mobile-menu-inner -->
+
+                    <div class="footer-bottom">
+                        <p>© 2025 Sadiq E Safar. All rights reserved.</p>
+                        <p>
+                            Designed And Developed By
+                            <a href="https://jilani.tech/" target="_blank">Jilani Tech</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay"></div>
-
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav">
-        <div class="close-menu">
-            <i class="fas fa-times"></i>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about-us.html">About Us</a></li>
-            <li><a href="./features.html">Features</a></li>
-            <li><a href="./pricing.html">Pricing</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-        <div class="mobile-nav-buttons">
-            <a href="#" class="btn btn-primary">Start Free Trial</a>
+            </footer>
         </div>
     </div>
 
-    <section class="privacy-section" id="privacy">
-        <div class="privacy-header">
-            <h1>Privacy Policy</h1><br>
-            <div class="effective-date">Effective Date: 05/10/2025</div>
-        </div>
+    <!-- iframe ko HTML me rakha gaya hai, JS ke andar nahi -->
+    <iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
 
-        <div class="privacy-content">
-            <nav class="privacy-nav">
-                <h3>Policy Sections</h3>
-                <ul class="nav-links-policy">
-                    <li><a href="#intro" class="active"><i class="fas fa-info-circle"></i> Introduction</a></li>
-                    <li><a href="#about" class=""><i class="fas fa-building"></i> About Us</a></li>
-                    <li><a href="#info-collected" class=""><i class="fas fa-database"></i> Information Collected</a>
-                    </li>
-                    <li><a href="#info-use" class=""><i class="fas fa-cogs"></i> How We Use Information</a></li>
-                    <li><a href="#info-sharing" class=""><i class="fas fa-share-alt"></i> Information Sharing</a></li>
-                    <li><a href="#data-security" class=""><i class="fas fa-shield-alt"></i> Data Security</a></li>
-                    <li><a href="#data-retention" class=""><i class="fas fa-archive"></i> Data Retention</a></li>
-                    <li><a href="#your-rights" class=""><i class="fas fa-user-check"></i> Your Rights</a></li>
-                    <li><a href="#international" class=""><i class="fas fa-globe"></i> International Transfers</a></li>
-                    <li><a href="#children" class=""><i class="fas fa-child"></i> Children's Privacy</a></li>
-                    <li><a href="#third-party" class=""><i class="fas fa-external-link-alt"></i> Third-Party Links</a>
-                    </li>
-                    <li><a href="#policy-changes" class=""><i class="fas fa-sync-alt"></i> Policy Changes</a></li>
-                    <li><a href="#contact" class=""><i class="fas fa-envelope"></i> Contact Us</a></li>
-                    <li><a href="#refund-policy" class=""><i class="fas fa-envelope"></i> Refund Policy</a></li>
-                </ul>
-            </nav>
-
-            <div class="policy-content">
-                <div class="policy-intro" id="intro">
-                    <p>Welcome to Sadiq E Safar. Your privacy is important to us, and we are committed to safeguarding
-                        the personal information you share with us. This Privacy Policy explains how we collect, use,
-                        store, and protect your information when you use our services. Please read it carefully so you
-                        understand your rights and our responsibilities.</p>
-                    <p>By using Sadiq E Safar, you agree to the terms outlined in this Privacy Policy. If you do not
-                        agree, you should stop using our services immediately.</p>
-                </div>
-
-                <div class="policy-section" id="about">
-                    <h2><i class="fas fa-building"></i> 1. About Sadiq E Safar</h2>
-                    <p>Sadiq E Safar is a Software-as-a-Service (SaaS) platform designed to streamline business travel
-                        management, enhance collaboration, and provide actionable insights.</p>
-                    <p>Because our service involves handling sensitive data, we treat the confidentiality and security
-                        of your personal information as a top priority.</p>
-                </div>
-
-                <div class="policy-section" id="info-collected">
-                    <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
-                    <p>When you use our services, we may collect the following types of information:</p>
-
-                    <h3>a. Personal Information</h3>
-                    <ul>
-                        <li>Name, email address, phone number, billing details.</li>
-                        <li>Account login credentials (encrypted).</li>
-                        <li>Identity verification details, if applicable.</li>
-                    </ul>
-
-                    <h3>b. Usage Data</h3>
-                    <ul>
-                        <li>Log data such as IP address, browser type, device information, and access times.</li>
-                        <li>Pages visited, actions taken, and features used on our platform.</li>
-                    </ul>
-
-                    <h3>c. Transaction Information</h3>
-                    <ul>
-                        <li>Payment method details (processed securely by third-party providers).</li>
-                        <li>Subscription history, invoices, and receipts.</li>
-                    </ul>
-
-                    <h3>d. Cookies &amp; Tracking Technologies</h3>
-                    <p>We use cookies and similar technologies to:</p>
-                    <ul>
-                        <li>Keep you logged in.</li>
-                        <li>Remember your preferences.</li>
-                        <li>Analyze site traffic and performance.</li>
-                    </ul>
-                    <p>You can manage or disable cookies in your browser settings, though some features may stop working
-                        correctly.</p>
-                </div>
-
-                <div class="policy-section" id="info-use">
-                    <h2><i class="fas fa-cogs"></i> 3. How We Use Your Information</h2>
-                    <p>We use the data collected for the following purposes:</p>
-                    <ul>
-                        <li><strong>Service Delivery</strong> – To provide and maintain the Sadiq E Safar platform.</li>
-                        <li><strong>Account Management</strong> – To create, manage, and update user profiles.</li>
-                        <li><strong>Customer Support</strong> – To respond to inquiries, troubleshoot, and resolve
-                            issues.</li>
-                        <li><strong>Billing &amp; Payments</strong> – To process transactions securely.</li>
-                        <li><strong>Service Improvement</strong> – To analyze trends and improve features.</li>
-                        <li><strong>Legal Compliance</strong> – To comply with applicable laws and prevent fraud or
-                            abuse.</li>
-                    </ul>
-                    <div class="highlight-box">
-                        <p><strong>We will never sell your data to third parties.</strong></p>
-                    </div>
-                </div>
-
-                <div class="policy-section" id="info-sharing">
-                    <h2><i class="fas fa-share-alt"></i> 4. How We Share Information</h2>
-                    <p>We only share your information under the following circumstances:</p>
-                    <ul>
-                        <li><strong>Service Providers:</strong> With trusted vendors who perform services such as
-                            payment processing, cloud hosting, analytics, or customer support.</li>
-                        <li><strong>Legal Obligations:</strong> When required by law, regulation, or legal process.</li>
-                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of
-                            assets, your data may be transferred as part of the business.</li>
-                        <li><strong>With Consent:</strong> We may share data for other purposes if you explicitly agree.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="policy-section" id="data-security">
-                    <h2><i class="fas fa-shield-alt"></i> 5. Data Security</h2>
-                    <p>We implement strong safeguards to protect your data, including:</p>
-                    <ul>
-                        <li>End-to-end encryption in transit (HTTPS/SSL).</li>
-                        <li>Encrypted storage of sensitive information.</li>
-                        <li>Regular system audits and penetration testing.</li>
-                        <li>Strict access controls for staff.</li>
-                    </ul>
-                    <p>While we use best practices, no method of storage or transmission is 100% secure. We encourage
-                        you to also protect your account with a strong password.</p>
-                </div>
-
-                <div class="policy-section" id="data-retention">
-                    <h2><i class="fas fa-archive"></i> 6. Data Retention</h2>
-                    <p>We keep your personal information only as long as necessary for the purposes described in this
-                        policy, or as required by law. Once your account is deleted, we will securely erase or anonymize
-                        your data unless retention is legally required.</p>
-                </div>
-
-                <div class="policy-section" id="your-rights">
-                    <h2><i class="fas fa-user-check"></i> 7. Your Rights</h2>
-                    <p>Depending on your location, you may have the following rights:</p>
-                    <ul>
-                        <li><strong>Access:</strong> Request a copy of your personal data.</li>
-                        <li><strong>Correction:</strong> Ask us to update or fix inaccuracies.</li>
-                        <li><strong>Deletion:</strong> Request that we delete your data.</li>
-                        <li><strong>Restriction:</strong> Limit how we process your information.</li>
-                        <li><strong>Portability:</strong> Obtain your data in a portable format.</li>
-                        <li><strong>Opt-Out:</strong> Withdraw consent for marketing communications.</li>
-                    </ul>
-                    <p>To exercise these rights, contact us at <strong>sadiqesafar@gmail.com</strong>.</p>
-                </div>
-
-                <div class="policy-section" id="international">
-                    <h2><i class="fas fa-globe"></i> 8. International Data Transfers</h2>
-                    <p>As a global service, we may transfer your information across borders. Whenever we transfer data
-                        outside your country, we ensure adequate safeguards are in place, such as standard contractual
-                        clauses or equivalent legal mechanisms.</p>
-                </div>
-
-                <div class="policy-section" id="children">
-                    <h2><i class="fas fa-child"></i> 9. Children's Privacy</h2>
-                    <p>Sadiq E Safar is not intended for children under the age of 16. We do not knowingly collect data
-                        from minors. If you believe we have unintentionally collected such data, please contact us, and
-                        we will delete it promptly.</p>
-                </div>
-
-                <div class="policy-section" id="third-party">
-                    <h2><i class="fas fa-external-link-alt"></i> 10. Third-Party Links &amp; Services</h2>
-                    <p>Our platform may contain links to third-party websites or services. Please note that we are not
-                        responsible for the privacy practices of those third parties. We recommend reviewing their
-                        policies before sharing your information.</p>
-                </div>
-
-                <div class="policy-section" id="policy-changes">
-                    <h2><i class="fas fa-sync-alt"></i> 11. Changes to This Policy</h2>
-                    <p>We may update this Privacy Policy from time to time. Changes will be effective when posted on
-                        this page, with the "Effective Date" updated accordingly. If changes are significant, we will
-                        notify you via email or in-app alert.</p>
-                </div>
-
-                <div class="policy-section" id="contact">
-                    <h2><i class="fas fa-envelope"></i> 12. Contact Us</h2>
-                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out:
-                    </p>
-
-                    <div class="contact-info">
-                        <h3 style="color: white;">Get In Touch</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:sadiqesafar@gmail.com">sadiqesafar@gmail.com</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-globe"></i>
-                                <a href="https://sadiqesafar.com/">sadiqesafar.com</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <a href="">Ahmedabad, Gujarat, India</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <script src="/index.js"></script>
 
 
-                <div class="policy-section" id="refund-policy">
-                    <h2><i class="fas fa-sync-alt"></i> 13. Refund Policy</h2>
-                    <p>Refund Policy - If any Refund approved by the company it will take 7 working days to credit to
-                        your original source account</p>
-                </div>
-            </div>
-        </div>
 
-        <a href="#" class="back-to-top" id="backToTop">
-            <i class="fas fa-chevron-up"></i>
-        </a>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <a href="./index.html" class="logo">
-                            <i class="fas fa-route"></i> SadiqESafar
-                        </a>
-                        <p>Streamlining tour and event management for travel agencies worldwide.</p>
-                    </div>
-                </div>
 
-                <div class="footer-column">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="./features.html">Features</a></li>
-                        <li><a href="./pricing.html">Pricing</a></li>
-                    </ul>
-                </div>
 
-                <div class="footer-column">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="./about-us.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
 
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="./terms-condition.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="footer-bottom">
-                <p>© 2025 Sadiq E Safar. All rights reserved.</p>
-                <p>
-                    Designed And Developed By
-                    <a href="https://jilani.tech/" target="_blank">Jilani Tech</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -553,12 +553,7 @@
     </script>
 
 
-    <script src="./action.js"></script>
-    <script defer=""
-        src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
-        integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
-        data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;8261aa64a52241de915493c8e3eb51e2&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}"
-        crossorigin="anonymous"></script>
+
 
 </body>
 

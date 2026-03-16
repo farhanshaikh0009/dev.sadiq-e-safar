@@ -90,13 +90,21 @@
                                                 .open .hamburger_1_line:last-child {
                                                     transform: translateY(calc(var(--thickness) * -0.5 + var(--gap) * -0.5)) rotate(calc(var(--rotate) * 3 * 1deg));
                                                 }
+
+                                                /* ✅ Mobile par buttons hide */
+                                                @media (max-width: 991px) {
+                                                    .desktop-only {
+                                                        display: none !important;
+                                                    }
+                                                }
                                             </style>
                                         </div>
                                         <div class="hamburger_1_line"></div>
                                     </div>
                                 </div>
 
-                                <a href="contact.html" class="cta cc-nav w-inline-block">
+                                <!-- ✅ Desktop Only Buttons -->
+                                <a href="contact.html" class="cta cc-nav w-inline-block desktop-only">
                                     <div class="cta-bg u-rainbow u-blur-perf"></div>
                                     <div class="cta-inner">
                                         <strong>Start Free Trial</strong>
@@ -104,12 +112,13 @@
                                 </a>
 
                                 <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
-                                    class="cta cc-nav w-inline-block">
+                                    class="cta cc-nav w-inline-block desktop-only">
                                     <div class="cta-bg u-rainbow u-blur-perf"></div>
                                     <div class="cta-inner">
                                         <strong>Login / Register</strong>
                                     </div>
                                 </a>
+
                             </div>
                         </div>
                     </div>
@@ -253,7 +262,7 @@
                                 <div class="features-card cc-green">
                                     <div class="features-card-content">
                                         <div class="feature-image">
-                                            <img src="assests/system.png" alt="All in One Management">
+                                            <img src="assests/system.png" class="feature-icon"  alt="All in One Management">
                                         </div>
 
                                         <h3 class="heading-m u-mb-m">All-in-One Management</h3>
@@ -268,7 +277,7 @@
                                 <div class="features-card cc-blue">
                                     <div class="features-card-content">
                                         <div class="feature-image">
-                                            <img src="assests/scanner.png" alt="Passport Scanner">
+                                            <img src="assests/scanner.png" class="feature-icon" alt="Passport Scanner">
                                         </div>
 
                                         <h3 class="heading-m u-mb-m">Passport Scanner & Auto Fill</h3>
@@ -284,7 +293,7 @@
                                 <div class="features-card cc-purple">
                                     <div class="features-card-content">
                                         <div class="feature-image">
-                                            <img src="assests/roadmap.png" alt="Event Timeline Tracker">
+                                            <img src="assests/roadmap.png" class="feature-icon" alt="Event Timeline Tracker">
                                         </div>
 
                                         <h3 class="heading-m u-mb-m">Event Timeline Tracker</h3>
@@ -399,11 +408,13 @@
 
                                     <div class="btn-wrapper cc-cta">
                                         <a href="" target="_blank">
-                                            <img src="assests/Gemini_Generated_Image_cqhmekcqhmekcqhm.png" loading="lazy" alt="Subscription Preview" width="150" height="50" />
+                                            <img src="assests/Gemini_Generated_Image_cqhmekcqhmekcqhm.png"
+                                                loading="lazy" alt="Subscription Preview" width="150" height="50" />
                                         </a>
 
                                         <a href="" target="_blank">
-                                            <img src="assests/Gemini_Generated_Image_nfs4xwnfs4xwnfs4.png" loading="lazy" alt="Subscription Preview" width="150" height="50" />
+                                            <img src="assests/Gemini_Generated_Image_nfs4xwnfs4xwnfs4.png"
+                                                loading="lazy" alt="Subscription Preview" width="150" height="50" />
                                         </a>
                                     </div>
 
@@ -426,38 +437,50 @@
             <footer class="footer">
                 <div class="container">
                     <div class="footer-content">
-                        <div class="footer-column">
-                            <div class="footer-logo">
-                                <a href="./index.html" class="logo">
-                                    <i class="fas fa-route"></i> SadiqESafar
-                                </a>
-                                <p>Streamlining tour and event management for travel agencies worldwide.</p>
+
+                        <div class="footer-logo">
+                            <a href="./index.html" class="Jtlogo">
+                                <span class="logo-text">Sadiq E Safar</span>
+                            </a>
+
+                            <p>
+                                Streamlining tour and event management for
+                                travel agencies worldwide.
+                            </p>
+                        </div>
+
+                        <div class="footer-links">
+
+                            <!-- Quick Links -->
+                            <div class="footer-column">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
                             </div>
+
+                            <!-- Product -->
+                            <div class="footer-column">
+                                <h4>Product</h4>
+                                <ul>
+                                    <li><a href="./features.html">Features</a></li>
+                                    <li><a href="./pricing.html">Pricing</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Legal -->
+                            <div class="footer-column legal-column">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="./terms-condition.html">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+
                         </div>
 
-                        <div class="footer-column">
-                            <h4>Product</h4>
-                            <ul>
-                                <li><a href="./features.html">Features</a></li>
-                                <li><a href="./pricing.html">Pricing</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4>Support</h4>
-                            <ul>
-                                <li><a href="./about-us.html">About Us</a></li>
-                                <li><a href="./contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="footer-column">
-                            <h4>Legal</h4>
-                            <ul>
-                                <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="./terms-condition.html">Terms of Service</a></li>
-                            </ul>
-                        </div>
                     </div>
 
                     <div class="footer-bottom">
