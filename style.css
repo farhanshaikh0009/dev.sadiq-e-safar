@@ -3991,7 +3991,7 @@ a {
 }
 
 .faq-icon {
-    color: #f0efef;
+    color: #49ae89;
     transition: color .15s;
     display: flex
 }
@@ -7887,26 +7887,24 @@ a {
 }
 
 /* =========================
-   Contact Section - New Theme
+   Contact Section - Updated Theme
    ========================= */
 
 :root {
-    --se-primary: #6D28D9;
-    /* Purple */
-    --se-primary-dark: #5B21B6;
-    --se-primary-light: #A78BFA;
+    --se-primary: #ebf6f2;
+    --se-primary-dark: #ebf6f2;
+    --se-primary-light: #ebf6f2;
 
     --se-heading: #0F172A;
-    /* Slate */
     --se-text: #334155;
 
     --se-white: #ffffff;
-    --se-bg-light: #F1F5F9;
+    --se-bg-light: #ebf6f2;
 
-    --se-success: #16A34A;
+    --se-success: #ebf6f2;
 
-    --se-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
-    --se-shadow-heavy: 0 18px 45px rgba(15, 23, 42, 0.18);
+    --se-shadow: 0 10px 30px rgba(235, 246, 242, 0.9);
+    --se-shadow-heavy: 0 18px 45px rgba(235, 246, 242, 1);
 
     --se-transition: all 0.25s ease;
     --se-transition-slow: all 0.35s ease;
@@ -7922,6 +7920,7 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    /* background: #ebf6f2; */
 }
 
 @media (max-width: 992px) {
@@ -7951,7 +7950,7 @@ a {
     position: absolute;
     width: 60px;
     height: 4px;
-    background: var(--se-primary);
+    background: #2a9e73;
     bottom: -10px;
     left: 0;
     border-radius: 2px;
@@ -7963,7 +7962,7 @@ a {
     color: var(--se-text);
 }
 
-/* Optional contact info (if you enable it later) */
+/* Optional contact info */
 .se-contact__info {
     margin-top: 40px;
     display: flex;
@@ -7978,24 +7977,26 @@ a {
     transition: var(--se-transition);
     padding: 15px;
     border-radius: 10px;
+    background: #ebf6f2;
 }
 
 .se-contact__infoItem:hover {
-    background: var(--se-bg-light);
+    background: #ebf6f2;
     transform: translateX(10px);
 }
 
 .se-contact__infoIcon {
     width: 50px;
     height: 50px;
-    background: var(--se-primary);
-    color: var(--se-white);
+    background: #ebf6f2;
+    color: var(--se-heading);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     flex-shrink: 0;
+    border: 1px solid #d6ebe4;
 }
 
 .se-contact__infoText h3 {
@@ -8005,7 +8006,7 @@ a {
 
 /* Form Container */
 .se-contact__formWrap {
-    background: var(--se-white);
+    background: #ebf6f2;
     padding: 40px;
     border-radius: 15px;
     box-shadow: var(--se-shadow-heavy);
@@ -8014,6 +8015,7 @@ a {
     animation: seFadeInUp 1s forwards 0.6s;
     position: relative;
     overflow: hidden;
+    border: 1px solid #d6ebe4;
 }
 
 .se-contact__formWrap::before {
@@ -8023,7 +8025,7 @@ a {
     left: 0;
     width: 100%;
     height: 6px;
-    background: linear-gradient(90deg, var(--se-primary), var(--se-primary-light));
+    background: #ebf6f2;
 }
 
 /* Floating Elements */
@@ -8032,8 +8034,8 @@ a {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: var(--se-primary-light);
-    opacity: 0.12;
+    background: #ebf6f2;
+    opacity: 0.35;
     z-index: 0;
     filter: blur(0.2px);
 }
@@ -8091,18 +8093,18 @@ a {
 .se-contact__control {
     width: 100%;
     padding: 15px;
-    border: 2px solid #e6eaf2;
+    border: 2px solid #d6ebe4;
     border-radius: 10px;
     font-size: 1rem;
     transition: var(--se-transition);
-    background: var(--se-bg-light);
+    background: #ffffff;
     color: var(--se-heading);
 }
 
 .se-contact__control:focus {
-    border-color: var(--se-primary);
+    border-color: #ebf6f2;
     outline: none;
-    box-shadow: 0 0 0 4px rgba(109, 40, 217, 0.18);
+    box-shadow: 0 0 0 4px rgba(235, 246, 242, 1);
 }
 
 textarea.se-contact__control {
@@ -8112,9 +8114,9 @@ textarea.se-contact__control {
 
 /* Button */
 .se-contact__btn {
-    background: var(--se-primary);
-    color: var(--se-white);
-    border: none;
+    background: #219a7d;
+    color: var(--se-heading);
+    border: 1px solid #d6ebe4;
     padding: 15px 30px;
     font-size: 1.1rem;
     border-radius: 10px;
@@ -8129,9 +8131,9 @@ textarea.se-contact__control {
 }
 
 .se-contact__btn:hover {
-    background: var(--se-primary-dark);
+    background: #219a7d;
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(109, 40, 217, 0.22);
+    box-shadow: 0 12px 24px rgba(235, 246, 242, 1);
 }
 
 .se-contact__btn:active {
@@ -8140,8 +8142,8 @@ textarea.se-contact__control {
 
 /* Success Message */
 .se-contact__success {
-    background: var(--se-success);
-    color: var(--se-white);
+    background: #219a7d;
+    color: var(--se-heading);
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -8149,6 +8151,7 @@ textarea.se-contact__control {
     display: none;
     animation: seFadeIn 0.5s ease;
     font-weight: 700;
+    border: 1px solid #d6ebe4;
 }
 
 /* Animations */
@@ -8199,7 +8202,6 @@ textarea.se-contact__control {
         padding: 10px;
     }
 }
-
 
 /* Feature Comparison Table */
 .feature-comparison {
@@ -8330,7 +8332,7 @@ textarea.se-contact__control {
 
 .faq-icon {
     transition: var(--transition);
-    color: var(--primary);
+    color: #49ae89;
     font-size: 1.2rem;
 }
 
@@ -8453,26 +8455,24 @@ textarea.se-contact__control {
 /* ================= GLOBAL BACKGROUND ================= */
 
 /* ================= THEME COLORS ================= */
-
 :root {
-
-    --primary: #7c6ee6;
-    --primary-dark: #6457d1;
-    --primary-light: #9a8ff0;
+    --primary: #ebf6f2;
+    --primary-dark: #ebf6f2;
+    --primary-light: #ebf6f2;
 
     --heading: #1f2937;
     --text: #6b7280;
 
     --white: #ffffff;
-    --background-light: #f5f2f9;
+    --background-light: #ebf6f2;
 
-    --success: #22c55e;
+    --success: #ebf6f2;
 
-    --card-bg: #ffffff;
-    --table-bg: #faf9fd;
+    --card-bg: #ebf6f2;
+    --table-bg: #ebf6f2;
 
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.12);
+    --shadow: 0 10px 30px rgba(235, 246, 242, 0.9);
+    --shadow-heavy: 0 15px 40px rgba(235, 246, 242, 1);
 
     --transition: all .3s ease;
     --transition-slow: all .5s ease;
@@ -8483,7 +8483,6 @@ textarea.se-contact__control {
 
 
 /* ================= GLOBAL HEADING FONT ================= */
-
 h1,
 h2,
 h3,
@@ -8495,18 +8494,17 @@ h6 {
 
 
 /* ================= PRICING SECTION ================= */
-
 .pricing-section {
     max-width: 1400px;
     margin: auto;
     padding: 60px 20px;
     width: 100%;
     margin-top: 120px;
+    /* background: var(--background-light); */
 }
 
 
 /* ================= HEADER ================= */
-
 .section-header {
     text-align: center;
     margin-bottom: 70px;
@@ -8529,7 +8527,6 @@ h6 {
 
 
 /* ================= PRICING CARDS ================= */
-
 .pricing-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -8538,14 +8535,15 @@ h6 {
 }
 
 .pricing-card {
-    background: var(--card-bg);
+    background: #ffffff;
+    /* White background */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
-    border: 1px solid #eee;
+    border: 1px solid #ebf6f2;
     position: relative;
 }
 
@@ -8556,9 +8554,8 @@ h6 {
 
 
 /* ================= POPULAR PLAN ================= */
-
 .pricing-card.popular {
-    border: 2px solid var(--primary);
+    border: 2px solid #3e9c7a;
     transform: scale(1.03);
     z-index: 2;
 }
@@ -8572,8 +8569,8 @@ h6 {
     top: -5px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary);
-    color: white;
+    background: #569880;
+    color: var(--heading);
     padding: 8px 40px;
     font-size: .9rem;
     font-weight: 600;
@@ -8584,18 +8581,17 @@ h6 {
 }
 
 
-/* ================= CARD HEADER ================= */
-
 .card-header {
     padding: 40px 30px 30px;
     text-align: center;
-    background: linear-gradient(135deg, #ffffff, #f4f1fa);
-    border-bottom: 1px solid #eee;
+    background: #ffffff;
+    /* White */
+    border-bottom: 1px solid #ebf6f2;
 }
 
 .popular .card-header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
+    background: #ebf6f2;
+    /* White */
 }
 
 .plan-name {
@@ -8625,12 +8621,12 @@ h6 {
 
 
 /* ================= CARD BODY ================= */
-
 .card-body {
     padding: 30px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    /* background: #ebf6f2; */
 }
 
 .features-list {
@@ -8658,23 +8654,23 @@ h6 {
 }
 
 .feature-included .feature-icon-pricing {
-    background: var(--success);
-    color: white;
+    background: #ebf6f2;
+    color: var(--heading);
     font-size: .7rem;
+    border: 1px solid #d6ebe4;
 }
 
 .feature-excluded .feature-icon-pricing {
-    background: #eee;
-    color: #bbb;
+    background: #ebf6f2;
+    color: var(--text);
 }
 
 .feature-excluded {
-    color: #bbb;
+    color: var(--text);
 }
 
 
 /* ================= BUTTON ================= */
-
 .cta-button {
     display: block;
     text-align: center;
@@ -8687,16 +8683,16 @@ h6 {
 }
 
 .standard-button {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: white;
-    box-shadow: 0 4px 15px rgba(124, 110, 230, .3);
+    background: #ebf6f2;
+    color: var(--heading);
+    box-shadow: 0 4px 15px rgba(235, 246, 242, 1);
+    border: 1px solid #d6ebe4;
 }
 
 .standard-button:hover {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    background: #ebf6f2;
     transform: translateY(-3px);
 }
-
 
 /* ================= COMPARISON TABLE ================= */
 
@@ -9743,7 +9739,7 @@ h6 {
     align-items: stretch;
     gap: 40px;
     padding: 60px 20px;
-    background: #f8f9fb;
+    /* background: #f8f9fb; */
     flex-wrap: wrap;
 }
 
@@ -9751,6 +9747,7 @@ h6 {
 .jt-trust-badge {
     text-align: center;
     max-width: 280px;
+    /* background-color: #ebf6f2; */
     padding: 30px 20px;
     border-radius: 12px;
     transition: 0.3s ease;
@@ -9767,7 +9764,8 @@ h6 {
     width: 70px;
     height: 70px;
     margin: 0 auto 20px;
-    background: linear-gradient(135deg, #6c63ff, #9f7aea);
+    /* background: linear-gradient(135deg, #6c63ff, #9f7aea); */
+    background-color: #4cbda3;
     border-radius: 50%;
     display: flex;
     align-items: center;
