@@ -8115,7 +8115,7 @@ textarea.se-contact__control {
 /* Button */
 .se-contact__btn {
     background: #219a7d;
-    color: var(--se-heading);
+    color: #ffffff;
     border: 1px solid #d6ebe4;
     padding: 15px 30px;
     font-size: 1.1rem;
