@@ -1,0 +1,27 @@
+# Robots.txt for Sadiq E Safar - Tour Management Software
+# https://sadiqesafar.com
+
+User-agent: *
+Allow: /
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow non-essential pages
+Disallow: /login-register.html
+
+# Sitemap location
+Sitemap: https://sadiqesafar.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 5
