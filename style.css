@@ -8327,9 +8327,8 @@ textarea.se-contact__control {
 }
 
 .faq-question:hover {
-    color: var(--primary);
+    color: black;
 }
-
 .faq-icon {
     transition: var(--transition);
     color: #49ae89;
@@ -8756,7 +8755,7 @@ h6 {
 }
 
 .faq-question:hover {
-    color: var(--primary);
+    color: black;
 }
 
 .faq-answer {
@@ -9127,7 +9126,7 @@ h6 {
 
 .effective-date {
     background: var(--primary-light);
-    color: var(--white);
+    color: black;
     display: inline-block;
     padding: 8px 20px;
     border-radius: 30px;
@@ -9195,13 +9194,13 @@ h6 {
 
 .nav-links-policy a:hover {
     background: var(--background-light);
-    color: var(--primary);
+    color: black;
     transform: translateX(5px);
 }
 
 .nav-links-policy a.active {
     background: var(--primary-light);
-    color: var(--white);
+    color: black;
 }
 
 .nav-links-policy i {
@@ -9514,13 +9513,13 @@ h6 {
 
 .nav-links-terms a:hover {
     background: var(--background-light);
-    color: var(--primary);
+    color: black;
     transform: translateX(5px);
 }
 
 .nav-links-terms a.active {
     background: var(--primary-light);
-    color: var(--white);
+    color: black;
 }
 
 .nav-links-terms i {
@@ -9625,7 +9624,7 @@ h6 {
 
 .contact-info {
     background: var(--primary-light);
-    color: var(--white);
+    color: black;
     padding: 25px;
     border-radius: 10px;
     margin-top: 40px;

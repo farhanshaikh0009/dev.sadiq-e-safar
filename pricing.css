@@ -466,9 +466,9 @@
        transition: var(--transition);
    }
 
-   .faq-question:hover {
-       color: var(--primary);
-   }
+.faq-question:hover {
+    color: black;
+}
 
    .faq-icon {
        transition: var(--transition);
