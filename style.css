@@ -2290,7 +2290,8 @@ a {
     border-bottom-right-radius: 64px;
     border-bottom-left-radius: 64px;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    padding-top: 20px;
 }
 
 .main.cc-home.cc-research {
@@ -6145,7 +6146,8 @@ a {
         flex-flow: column;
         justify-content: flex-start;
         align-items: center;
-        display: flex
+        display: flex;
+        padding-top: 30px;
     }
 
     .nav-mobile-link {
@@ -8329,6 +8331,7 @@ textarea.se-contact__control {
 .faq-question:hover {
     color: black;
 }
+
 .faq-icon {
     transition: var(--transition);
     color: #49ae89;
