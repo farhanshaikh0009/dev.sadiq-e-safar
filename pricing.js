@@ -1,6 +1,6 @@
 // pricing.js
 
-const API_URL = "https://sadiqesafar.com/api/subscription-plan/multiple/1";
+const API_URL = "https://web.sadiqesafar.com/api/subscription-plan/multiple/1";
 
 const byId = (id) => document.getElementById(id);
 

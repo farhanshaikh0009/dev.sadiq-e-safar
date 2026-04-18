@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .action-bar {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .download-btn {
+            background-color: #111827;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .download-btn:hover {
+            background-color: #374151;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .invoice-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            min-height: 1000px; /* Ensures it fits on 1 A4 page without spilling */
+        }
+
+        .invoice-content {
+            padding: 40px 40px 120px 40px; 
+            position: relative;
+            z-index: 10;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            color: #111;
+        }
+
+        .invoice-no {
+            font-size: 14px;
+            font-weight: 700;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 64px;
+            font-weight: 900;
+            color: #219a7d;
+            margin: 0 0 15px 0;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .date {
+            font-size: 14px;
+            font-weight: 800;
+            color: #18181b;
+            margin-bottom: 50px;
+        }
+
+        .address-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .address-block {
+            width: 48%;
+        }
+
+        .address-title {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .address-details {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #52525b;
+            font-weight: 500;
+        }
+
+        .table-container {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #e4e4e7;
+            padding: 14px 15px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 800;
+            color: #3f3f46;
+        }
+        
+        th:nth-child(2), td:nth-child(2) { text-align: center; width: 15%; } 
+        th:nth-child(3), td:nth-child(3) { text-align: right; width: 20%; } 
+        th:nth-child(4), td:nth-child(4) { text-align: right; width: 20%; } 
+
+        td {
+            padding: 18px 15px;
+            font-size: 14px;
+            color: #3f3f46;
+            font-weight: 600;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e4e4e7;
+            margin: 2px 0 15px 0;
+        }
+
+        .table-total {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 15px;
+        }
+
+        .total-label {
+            font-size: 16px;
+            font-weight: 900;
+            margin-right: 40px;
+            color: #18181b;
+        }
+
+        .total-amount {
+            font-size: 18px;
+            font-weight: 900;
+            color: #18181b;
+        }
+
+        .footer-info {
+            margin-top: 60px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #52525b;
+            font-weight: 500;
+        }
+
+        .footer-info strong {
+            font-weight: 800;
+            color: #18181b;
+            margin-right: 6px;
+        }
+
+        /* Abstract Shapes Background */
+        .shape-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 380px;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .invoice-content {
+                padding: 30px 20px 80px 20px;
+            }
+            .title {
+                font-size: 38px;
+            }
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            #invoice-date-no {
+                text-align: left !important;
+            }
+            .address-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .address-block {
+                width: 100%;
+                padding-left: 0 !important;
+            }
+            th, td {
+                padding: 10px 8px;
+                font-size: 13px;
+            }
+            table {
+                min-width: 400px;
+            }
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .logo-text img {
+                height: 70px !important;
+            }
+            .shape-container {
+                height: 200px;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: transparent;
+                padding: 0;
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .action-bar {
+                display: none;
+            }
+            .invoice-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <button class="download-btn" onclick="downloadPDF()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download PDF
+        </button>
+    </div>
+
+    <div class="invoice-container" id="invoice">
+        <!-- Background Shapes -->
+        <div class="shape-container">
+            <svg viewBox="0 0 800 380" width="100%" height="100%" preserveAspectRatio="none">
+                <path d="M0,180 Q180,100 450,300 L0,300 Z" fill="#ebf6f2" opacity="0.95"></path>
+                <path d="M0,300 L0,260 C150,230 300,340 500,290 C650,240 750,120 800,20 L800,380 L0,380 Z" fill="#219a7d"></path>
+            </svg>
+        </div>
+
+        <div class="invoice-content">
+            <div class="header-top">
+                <div class="logo-text">
+                    <img src="https://web.sadiqesafar.com/assests/sadiq-e-safar-logo.png" alt="Sadiq-e-Safar Logo" style="height: 100px; width: auto; object-fit: contain;">
+                </div>
+                <div class="invoice-no" id="invoice-date-no" style="text-align: right;">
+                    Date: 09 April, 2026
+                </div>
+            </div>
+
+            <h1 class="title">INVOICE</h1>
+
+            <div class="address-section">
+                <div class="address-block">
+                    <div class="address-title">Billed to:</div>
+                    <div class="address-details" id="billed-to">
+                        <!-- Dynamic details here -->
+                        Agency Name<br>
+                        Address
+                    </div>
+                </div>
+                <div class="address-block" style="padding-left: 20px;">
+                    <div class="address-title">From:</div>
+                    <div class="address-details">
+                        <strong>Sadiq-e-Safar</strong><br>
+                        Shop No. 2 First Floor, Samiyana Appartment,<br>
+                        opp. Dena Bank, Danilimda,<br>
+                        Ahmedabad, Gujarat 380024<br>
+                        hello@web.sadiqesafar.com<br>
+                        www.web.sadiqesafar.com
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-items">
+                        <tr>
+                            <td>Subscription</td>
+                            <td>1</td>
+                            <td>₹0</td>
+                            <td>₹0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="divider"></div>
+                <div class="table-total">
+                    <span class="total-label">Total</span>
+                    <span class="total-amount" id="total-amount">₹0</span>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div style="margin-bottom: 5px;"><strong>Payment method:</strong> <span id="payment-method">N/A</span></div>
+                <div><strong>Transaction ID:</strong> <span id="transaction-id">N/A</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTransactionId = '000001';
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const params = new URLSearchParams(window.location.search);
+            const agencyId = params.get("agencyId");
+            const planId = params.get("planId");
+            const subscriptionId = params.get("subscriptionId");
+
+            if (agencyId && planId && subscriptionId) {
+                try {
+                    const response = await fetch(`https://web.sadiqesafar.com/api/subscription-invoice-details?agencyId=${agencyId}&planId=${planId}&subscriptionId=${subscriptionId}`);
+                    const result = await response.json();
+
+                    if (result.success && result.data) {
+                        const { agency, plan, subscription, payment } = result.data;
+
+                        const orderId = (subscription && subscription.order_id) ? subscription.order_id : 'UNKNOWN';
+                        let agencyName = 'Agency';
+                        if (agency && (agency.agency_name || agency.owner_name)) {
+                            agencyName = (agency.agency_name || agency.owner_name).replace(/[^a-zA-Z0-9_]/g, '_');
+                        }
+                        currentTransactionId = `${agencyName}_${orderId}`;
+
+
+                        // Date
+                        let transDate = new Date();
+                        if (payment && payment.transaction_datetime) {
+                            transDate = new Date(payment.transaction_datetime);
+                        } else if (subscription && subscription.createdAt) {
+                            transDate = new Date(subscription.createdAt);
+                        }
+                        const formattedDate = new Date().toLocaleDateString("en-GB", {
+                            day: '2-digit',
+                            month: 'long',
+                            year: 'numeric'
+                        });
+                        const dateElem = document.getElementById("invoice-date-no");
+                        if (dateElem) {
+                            dateElem.innerHTML = `Date: ${formattedDate}<br><span style="font-size:12px;color:#888;">Order ID: ${subscription.order_id || ''}</span>`;
+                        }
+
+                        // Billed To
+                        const billedToElem = document.getElementById("billed-to");
+                        if (billedToElem) {
+                            const name = agency.agency_name || agency.owner_name || '';
+                            const phone = agency.mobileNo ? `Ph: ${agency.mobileNo}` : '';
+                            const email = agency.emailId || '';
+                            const address = [agency.address, agency.city, agency.state, agency.pinCode].filter(Boolean).join(', ');
+                            
+                            billedToElem.innerHTML = `<strong>${name}</strong><br>${address}<br>${phone}<br>${email}`;
+                        }
+
+                        // Items
+                        const itemsElem = document.getElementById("invoice-items");
+                        const price = subscription.amount || 0;
+                        const planName = plan.subscription_type ? `${plan.subscription_type} Plan` : 'Subscription';
+                        if (itemsElem) {
+                            itemsElem.innerHTML = `
+                                <tr>
+                                    <td>${planName}</td>
+                                    <td>1</td>
+                                    <td>₹${price}</td>
+                                    <td>₹${price}</td>
+                                </tr>
+                            `;
+                        }
+
+                        // Total
+                        const totalElem = document.getElementById("total-amount");
+                        if (totalElem) {
+                            totalElem.innerText = `₹${price}`;
+                        }
+
+                        // Footer
+                        const paymentMethodElem = document.getElementById("payment-method");
+                        if (paymentMethodElem && payment) {
+                            paymentMethodElem.innerText = payment.transaction_mode || 'N/A';
+                        }
+                        
+                        const txnIdElem = document.getElementById("transaction-id");
+                        if (txnIdElem && payment) {
+                            txnIdElem.innerText = payment.transaction_id || 'N/A';
+                        }
+                    }
+                } catch (error) {
+                    console.error("Error fetching invoice details:", error);
+                }
+            } else {
+                // Formatting for Date fallback
+                const dateElem = document.getElementById("invoice-date-no");
+                if (dateElem && dateElem.innerText.includes('Date: 09 April, 2026')) {
+                   const formattedDate = new Date().toLocaleDateString("en-GB", { day: '2-digit', month: 'long', year: 'numeric' });
+                   dateElem.innerHTML = `Date: ${formattedDate}`;
+                }
+            }
+        });
+
+        async function downloadPDF() {
+            const element = document.getElementById('invoice');
+            const btn = document.querySelector('.download-btn');
+            const originalText = btn.innerHTML;
+            
+            // Add loading state
+            btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg> Generating...`;
+            btn.style.pointerEvents = 'none';
+
+            let dynamicStyle = document.getElementById('loading-style-spin');
+            if(!dynamicStyle) {
+                dynamicStyle = document.createElement('style');
+                dynamicStyle.id = 'loading-style-spin';
+                dynamicStyle.innerHTML = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
+                document.head.appendChild(dynamicStyle);
+            }
+
+            try {
+                // Clone HTML to send to backend
+                const cloneDoc = document.documentElement.cloneNode(true);
+                
+                // Hide action bar logic in cloned DOM
+                const actionBarHtml = cloneDoc.querySelector('.action-bar');
+                if (actionBarHtml) actionBarHtml.remove();
+
+                // Convert relative images to absolute for puppeteer
+                const images = cloneDoc.querySelectorAll('img');
+                images.forEach(img => {
+                    const src = img.getAttribute('src');
+                    if (src && src.includes('./assests/')) {
+                        img.src = "https://web.sadiqesafar.com/assests/sadiq-e-safar-logo.png";
+                    }
+                });
+
+                const reqBody = { htmlContent: cloneDoc.outerHTML };
+
+                const response = await fetch('https://web.sadiqesafar.com/api/html-to-pdf', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(reqBody)
+                });
+
+                const result = await response.json();
+                
+                if (result && result.data) {
+                    const linkSource = `data:application/pdf;base64,${result.data}`;
+                    const downloadLink = document.createElement("a");
+                    downloadLink.href = linkSource;
+                    downloadLink.download = `Invoice_${currentTransactionId}.pdf`;
+                    downloadLink.click();
+                } else {
+                    alert("Failed to generate PDF properly. Check console for details.");
+                    console.error("PDF API Response:", result);
+                }
+            } catch (error) {
+                console.error("Error generating PDF via API:", error);
+                alert("An error occurred. Make sure your internet connection is stable.");
+            } finally {
+                btn.innerHTML = originalText;
+                btn.style.pointerEvents = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
