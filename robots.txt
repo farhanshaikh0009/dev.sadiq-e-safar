@@ -1,5 +1,5 @@
 # Robots.txt for Sadiq E Safar - Tour Management Software
-# https://sadiqesafar.com
+# https://web.sadiqesafar.com
 
 User-agent: *
 Allow: /
@@ -21,7 +21,7 @@ Allow: /
 Disallow: /login-register.html
 
 # Sitemap location
-Sitemap: https://sadiqesafar.com/sitemap.xml
+Sitemap: https://web.sadiqesafar.com/sitemap.xml
 
 # Crawl-delay (optional, helps with server load)
 Crawl-delay: 5
