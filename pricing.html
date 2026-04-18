@@ -179,8 +179,123 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="navbar.css">
+    <style>
+        .platform-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
+        .platform-modal.show {
+            display: flex;
+            opacity: 1;
+        }
 
+        .platform-modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .platform-modal.show .platform-modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-modal:hover {
+            color: #333;
+        }
+
+        .platform-modal-title {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .platform-modal-desc {
+            margin-bottom: 25px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .platform-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .platform-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+
+        .web-btn {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+
+        .web-btn:hover {
+            background-color: #e0e0e0;
+            border-color: #ccc;
+        }
+
+        .app-btn {
+            background-color: #00875f;
+            color: #fff;
+            border: 2px solid #00875f;
+        }
+
+        .app-btn:hover {
+            background-color: #006b4b;
+            border-color: #006b4b;
+        }
+
+        .web-app-btn {
+            background-color: #0056b3;
+            color: #fff;
+            border: 2px solid #0056b3;
+        }
+
+        .web-app-btn:hover {
+            background-color: #004494;
+            border-color: #004494;
+        }
+    </style>
 </head>
 
 <body>
@@ -316,7 +431,7 @@
             <h3 class="comparison-title">Detailed Feature Comparison</h3>
             <table class="comparison-table">
                 <thead id="comparisonHeader"></thead>
-                                <tbody id="comparisonBody">
+                <tbody id="comparisonBody">
                 </tbody>
             </table>
         </div>
@@ -432,6 +547,25 @@
         </div>
     </section>
 
+    <!-- Platform Choice Modal -->
+    <div id="platformModal" class="platform-modal">
+        <div class="platform-modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="platform-modal-title">Select Platform</h3>
+            <p class="platform-modal-desc">Where would you like to continue?</p>
+            <div class="platform-options">
+
+                <a href="https://app.sadiqesafar.com/" target="_blank" class="platform-btn web-app-btn">
+                    <i class="fas fa-desktop"></i> Web App
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=sadiqe.safar.com" target="_blank"
+                    class="platform-btn app-btn">
+                    <i class="fab fa-google-play"></i> Android App
+                </a>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -541,14 +675,14 @@
                     <li>✔ ${plan.profit_loss_report} Profit Report</li>
                     <li>✔ ${plan.sub_user} Sub Users</li>
                     <li>✔ ${supportText} Support</li>
-                </ul>
-
-                <a href="#" class="cta-button standard-button">
-                    Choose Plan
-                </a>
+              </ul>
+                        <a href="#" class="cta-button standard-button">Choose Plan</a>
+                    </div>
             </div>
         </div>
+        
         `;
+
 
                 container.innerHTML += card;
             });
@@ -604,20 +738,37 @@
                     item.classList.toggle('active');
                 });
             });
+        });
 
-            const planButtons = document.querySelectorAll('.cta-button');
-            planButtons.forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
+        // Event delegation for dynamically loaded cta-buttons and modal logic
+        document.addEventListener('click', function (e) {
+            // Check if click was on a cta-button
+            if (e.target.closest('.cta-button')) {
+                e.preventDefault();
+                const button = e.target.closest('.cta-button');
 
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 200);
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = '';
+                }, 200);
 
-                    alert('Thank you for your interest! This would redirect to the checkout page in a real application.');
-                });
-            });
+                // Show modal
+                const modal = document.getElementById('platformModal');
+                if (modal) {
+                    modal.classList.add('show');
+                }
+            }
+
+            // Close modal logic
+            if (e.target.closest('.close-modal')) {
+                const modal = document.getElementById('platformModal');
+                if (modal) {
+                    modal.classList.remove('show');
+                }
+            }
+            if (e.target.classList.contains('platform-modal')) {
+                e.target.classList.remove('show');
+            }
         });
         function renderComparisonTable(plans) {
             const thead = document.getElementById("comparisonHeader");
