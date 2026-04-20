@@ -1,10 +1,15 @@
 # Robots.txt for Sadiq E Safar - Tour Management Software
+
 # https://web.sadiqesafar.com
 
 User-agent: *
-Allow: /
-# Disallow non-essential pages
 Disallow: /login-register.html
 
-# Sitemap location
+# Optional: block private/admin pages (agar future me ho)
+
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Sitemap
+
 Sitemap: https://web.sadiqesafar.com/sitemap.xml
