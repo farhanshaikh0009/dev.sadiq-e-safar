@@ -115,9 +115,14 @@
     }
     </script>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
+    <!-- Stylesheets (Performance Optimized) -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="navbar.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
+    </noscript>
 </head>
 
 <body style="overflow: auto;">
@@ -131,7 +136,7 @@
                             <div class="nav-left">
                                 <a href="/" class="nav-logo w-inline-block">
                                     <div class="logo-icon">
-                                        <img src="assests/sadiq-e-safar-logo.png" alt="Logo Icon" height="100" />
+                                        <img src="assests/sadiq-e-safar-logo.png" alt="Sadiq E Safar - Tour Management Application Logo" height="100" />
                                     </div>
                                 </a>
 
@@ -380,7 +385,7 @@
 
                         <div class="footer-logo">
                             <a href="./index.html" class="Jtlogo">
-                                <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Logo" style="height: 70px; width: auto;" />
+                                <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Branding Logo" style="height: 70px; width: auto;" />
                             </a>
 
                             <p>

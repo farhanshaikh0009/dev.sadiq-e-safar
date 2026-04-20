@@ -184,9 +184,14 @@
     }
     </script>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css">
+    <!-- Stylesheets (Performance Optimized) -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="navbar.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar.css">
+    </noscript>
 </head>
 
 <body style="overflow: auto;">
@@ -463,7 +468,7 @@
                             <div class="custom-feature-grid">
                                 <div class="custom-feature-card">
                                     <div class="custom-feature-icon">
-                                        <img src="assests/integration.png" />
+                                        <img src="assests/integration.png" alt="Centralized travel CRM and data integration dashboard" />
                                     </div>
                                     <h3>Centralized Travel CRM Data</h3>
                                     <p>Manage enquiries, customers, and tour packages with ease from a single cloud-based dashboard.</p>
@@ -471,7 +476,7 @@
 
                                 <div class="custom-feature-card">
                                     <div class="custom-feature-icon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" />
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png" alt="Smart payment tracking and automated reminders" />
                                     </div>
                                     <h3>Smart Payment Tracking</h3>
                                     <p>Track travel payment transactions, send automated reminders, and generate receipts & invoices instantly.</p>
@@ -479,7 +484,7 @@
 
                                 <div class="custom-feature-card">
                                     <div class="custom-feature-icon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" />
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Tour event timeline and itinerary management" />
                                     </div>
                                     <h3>Tour Event Timeline</h3>
                                     <p>Organize tour itineraries day by day — from departures to ziyarat schedules with our itinerary management application.</p>
@@ -487,7 +492,7 @@
 
                                 <div class="custom-feature-card">
                                     <div class="custom-feature-icon">
-                                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" />
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Complete business control and hotel management dashboard" />
                                     </div>
                                     <h3>Complete Business Control</h3>
                                     <p>Manage hotel rooms, travel documents, and resources from one centralized dashboard.</p>
@@ -564,7 +569,7 @@
                                         alt="Sadiq E Safar tour management app - subscription plans starting at ₹999" class="cta-banner-mockup" />
 
                                     <img src="https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/67333c29800fff249bbff50c_popcorn-home-mobile.webp"
-                                        loading="lazy" width="317.5" height="180" alt=""
+                                        loading="lazy" width="317.5" height="180" alt="Mobile app preview for tour management and event tracking"
                                         class="cta-banner-img-mobile" />
                                 </div>
                             </div>
@@ -582,7 +587,7 @@
 
                         <div class="footer-logo">
                             <a href="./index.html" class="Jtlogo">
-                                <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Logo" style="height: 70px; width: auto;" />
+                                <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Branding Logo" style="height: 70px; width: auto;" />
                             </a>
 
                             <p>
