@@ -2,14 +2,54 @@
 
 # https://web.sadiqesafar.com
 
+# ------------------------------
+
+# Global rules
+
+# ------------------------------
+
 User-agent: *
 Disallow: /login-register.html
-
-# Optional: block private/admin pages (agar future me ho)
-
 Disallow: /admin/
 Disallow: /dashboard/
 
+# ------------------------------
+
+# Block AI / Crawlers (optional but OK)
+
+# ------------------------------
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CloudflareBrowserRenderingCrawler
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# ------------------------------
+
 # Sitemap
+
+# ------------------------------
 
 Sitemap: https://web.sadiqesafar.com/sitemap.xml
