@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block unnecessary folders (optional)
-Disallow: /admin/
-Disallow: /login/
-Disallow: /private/
-
-Sitemap: https://sadiqesafar.com/sitemap.xml
+Sitemap: https://web.sadiqesafar.com/sitemap.xml
