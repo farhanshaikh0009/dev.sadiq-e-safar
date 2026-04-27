@@ -1,0 +1,243 @@
+/* How To Use Page Styles */
+
+.how-to-use-hero {
+    padding: 200px 0 80px; /* Further increased to clear the large logo/navbar area */
+    text-align: center;
+    position: relative;
+    background: #ffffff; /* Switched to solid white to eliminate the 'blurry gradient' effect under the navbar */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Removed the ::after gradient that was causing extra visual blur/fuzziness at the bottom of the hero */
+
+.section-heading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.subheading {
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6-column base for flexible spanning */
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.video-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    grid-column: span 2; /* Default span for 3-card rows */
+}
+
+/* Row 1 spanning (2 cards) */
+.video-card.featured-row {
+    grid-column: span 3;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(179, 139, 64, 0.2);
+}
+
+.video-thumbnail-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.video-card:hover .video-thumbnail {
+    transform: scale(1.05);
+}
+
+
+
+.video-content {
+    padding: 25px;
+}
+
+.video-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.video-subtitle {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.video-subtitle::before {
+    content: '●';
+    color: #b38b40;
+    font-size: 8px;
+}
+
+.video-stats {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.watch-now-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #b38b40;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(179, 139, 64, 0.3);
+}
+
+.watch-now-btn:hover {
+    background: #967434;
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(179, 139, 64, 0.4);
+}
+
+.watch-now-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.watch-now-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.video-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #b38b40;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.support-section {
+    padding: 60px 0 100px;
+    background: #fdfdfd;
+}
+
+.support-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.support-card h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.support-card p {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.support-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe57;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 991px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    .video-card, .video-card.featured-row {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2.5rem;
+    }
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-card {
+        padding: 40px 20px;
+    }
+    .support-card h2 {
+        font-size: 2rem;
+    }
+}
