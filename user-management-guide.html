@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTW9JVXWEW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PTW9JVXWEW');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>User Management & Permissions Guide | Sadiq E Safar (SDS) App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assests/icon.png" />
+    <link rel="apple-touch-icon" href="assests/sadiq-e-safar-logo.png" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Learn how to manage team members and permissions in Sadiq E Safar (SDS) App. Detailed guide on adding sub-users, assigning roles (Admin, Staff, Viewer), and controlling page access." />
+
+    <meta name="keywords"
+        content="Sadiq E Safar user management, travel agency team collaboration, sub-user permissions guide, travel software roles, manage agency staff" />
+
+    <meta name="author" content="Jilani Tech" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Geo Targeting -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <meta name="language" content="English" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Managing Team Users & Roles | Sadiq E Safar Guide" />
+    <meta property="og:description"
+        content="Scale your travel agency by adding team members with specific roles and granular permissions in Sadiq E Safar." />
+    <meta property="og:url" content="https://web.sadiqesafar.com/user-management-guide.html" />
+    <meta property="og:image" content="https://web.sadiqesafar.com/assests/how-to/Users Kaise Manage Kare-images.jpg" />
+    <meta property="og:site_name" content="Sadiq E Safar" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body style="overflow: auto;">
+    <div class="page-wrapper">
+        <div class="w-embed">
+
+            <nav class="nav">
+                <div class="page-padding">
+                    <div class="container">
+                        <div class="nav-inner">
+                            <div class="nav-left">
+                                <a href="/" class="nav-logo w-inline-block"
+                                    title="Sadiq E Safar - Tour Management Application">
+                                    <div class="logo-icon">
+                                        <img src="assests/sadiq-e-safar-logo.png"
+                                            alt="Sadiq E Safar - Best Tour Management Application India" height="100" />
+                                    </div>
+                                </a>
+
+                                <div class="nav-menu">
+                                    <a href="/" class="nav-link">Home</a>
+                                    <a href="about-us.html" class="nav-link">About Us</a>
+                                    <a href="features.html" class="nav-link">Features</a>
+                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                    <a href="how-to-use.html" class="nav-link">How To Use</a>
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </div>
+                            </div>
+
+                            <div class="nav-right">
+                                <div class="nav-mobile-btn">
+                                    <div class="hamburger_1_wrap">
+                                        <div class="hamburger_1_line"></div>
+                                        <div class="hamburger_1_line"></div>
+                                    </div>
+                                </div>
+
+                                
+
+                                <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
+                                    class="cta cc-nav w-inline-block desktop-only">
+                                    <div class="cta-bg u-rainbow u-blur-perf"></div>
+                                    <div class="cta-inner">
+                                        <strong>Login / Register</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-mobile-menu">
+                    <div class="nav-mobile-menu-top"></div>
+                    <div class="page-padding">
+                        <div class="container">
+                            <div class="mobile-menu-inner">
+                                <a href="/" class="nav-mobile-link">Home</a>
+                                <a href="about-us.html" class="nav-mobile-link">About Us</a>
+                                <a href="features.html" class="nav-mobile-link">Features</a>
+                                <a href="pricing.html" class="nav-mobile-link">Pricing</a>
+                                <a href="how-to-use.html" class="nav-mobile-link">How To Use</a>
+                                <a href="contact.html" class="nav-mobile-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main">
+                <header class="blog-hero">
+                    <div class="page-padding">
+                        <div class="container">
+                            <span class="blog-category">Administration Guide</span>
+                            <h1 class="blog-title">User Management & Permissions Guide</h1>
+                            <div class="blog-meta">
+                                <div class="blog-meta-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>April 27, 2026</span>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Jilani Tech Official</span>
+                                </div>
+                                <div class="blog-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>6 Min Read</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <article class="blog-content-wrapper">
+                    <div class="blog-featured-image">
+                        <img src="assests/how-to/Users Kaise Manage Kare-images.jpg" alt="User Management Guide">
+                    </div>
+
+                    <div class="blog-post-body">
+                        <p>As your travel agency grows, you'll likely need a team to help manage bookings, tourists, and finances. Sadiq E Safar's user management module allows you to add team members with specific roles and granular permissions. This ensures your data remains secure while empowering your staff to do their jobs effectively.</p>
+
+                        <h2><span>1</span> Accessing the User Management Section</h2>
+                        <ul>
+                            <li><strong>Navigate:</strong> From the main dashboard, locate and click on the **"Manage User"** option 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=35" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 00:35
+                                </a>.
+                            </li>
+                            <li><strong>Administrative Access:</strong> Remember that the primary account (your login) is the **Owner Account**, which has full control over all other users 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=47" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 00:47
+                                </a>.
+                            </li>
+                        </ul>
+
+                        <h2><span>2</span> Creating a New Sub-User</h2>
+                        <p>To add a new member to your agency, click the "Add User" icon and enter their profile details 
+                            <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=64" target="_blank" class="timestamp-link">
+                                <i class="fas fa-play-circle"></i> 01:04
+                            </a>.
+                        </p>
+                        <ul>
+                            <li><strong>Profile:</strong> Input their **Name**, **Mobile Number**, and **Email Address**.
+                            </li>
+                            <li><strong>Security:</strong> Create a unique password for the user so they can log in from their own device 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=79" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 01:19
+                                </a>.
+                            </li>
+                        </ul>
+
+                        <h2><span>3</span> Assigning Roles & Permissions</h2>
+                        <p>Granular access control allows you to define exactly what each team member can see or do 
+                            <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=98" target="_blank" class="timestamp-link">
+                                <i class="fas fa-play-circle"></i> 01:38
+                            </a>.
+                        </p>
+                        <ul>
+                            <li><strong>Admin Role:</strong> Provides a dashboard similar to yours with extensive access 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=113" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 01:53
+                                </a>.
+                            </li>
+                            <li><strong>Manager/Staff Role:</strong> Can **create and update** entries only on the specific pages you permit 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=121" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 02:01
+                                </a>.
+                            </li>
+                            <li><strong>Viewer Role:</strong> Read-only access. They can see data but **cannot** create or update anything 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=148" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 02:28
+                                </a>.
+                            </li>
+                            <li><strong>Page Permissions:</strong> Manually toggle access to specific modules like "Packages," "Tourist," or "Finance" 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=160" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 02:40
+                                </a>.
+                            </li>
+                        </ul>
+                        <p>Set the status to **"Active"** and click **Submit** to finalize 
+                            <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=175" target="_blank" class="timestamp-link">
+                                <i class="fas fa-play-circle"></i> 02:55
+                            </a>.
+                        </p>
+
+                        <h2><span>4</span> Modifying & Managing Users</h2>
+                        <ul>
+                            <li><strong>Update:</strong> Click the <strong>Edit (pencil) icon</strong> on a user entry to update their roles, permissions, or contact info 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=214" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 03:34
+                                </a>.
+                            </li>
+                            <li><strong>Deactivation:</strong> Change their status to <strong>"Inactive"</strong> to block access without deleting their history. This logs them out of all devices instantly 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=270" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 04:30
+                                </a>.
+                            </li>
+                            <li><strong>Deletion:</strong> Use the <strong>Red Delete icon</strong> and confirm with "Yes" to remove a user permanently 
+                                <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=289" target="_blank" class="timestamp-link">
+                                    <i class="fas fa-play-circle"></i> 04:49
+                                </a>.
+                            </li>
+                        </ul>
+
+                        <div class="blog-note">
+                            <strong>Setup Required:</strong> Once a user is created, you must share the Email ID and Password you set with them so they can access the agency data from their own device 
+                            <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o&t=186" target="_blank" class="timestamp-link">
+                                <i class="fas fa-play-circle"></i> 03:06
+                            </a>.
+                        </div>
+
+                        <div class="blog-cta-card">
+                            <h2>Collaborate with Your Team</h2>
+                            <p>Watch the full tutorial to see how to build and manage a secure team within your Sadiq E Safar agency.</p>
+                            <a href="http://www.youtube.com/watch?v=8tTBaQcGo9o" target="_blank" class="blog-cta-btn">
+                                <i class="fab fa-youtube"></i> Watch User Management Guide
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+
+                        <div class="footer-logo">
+                            <a href="./index.html" class="Jtlogo">
+                                <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Logo" style="height: 70px; width: auto;" />
+                            </a>
+
+                            <p>
+                                India's best tour management application — streamlining tour and event management for
+                                travel agencies & tour operators.
+                            </p>
+                        </div>
+
+                        <div class="footer-links">
+                            <!-- Quick Links -->
+                            <div class="footer-column">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="./about-us.html">About Us</a></li>
+                                    <li><a href="./contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Product -->
+                            <div class="footer-column">
+                                <h4>Product</h4>
+                                <ul>
+                                    <li><a href="./features.html">Features</a></li>
+                                    <li><a href="./pricing.html">Pricing</a></li>
+                                    <li><a href="./how-to-use.html">How To Use</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Legal -->
+                            <div class="footer-column legal-column">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="./terms-condition.html">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>© 2026 Sadiq E Safar. All rights reserved. | Designed And Developed By <a href="https://jilani.tech/" target="_blank">Jilani Tech</a></p>
+                        <div class="footer-badge">
+                            <a href="https://www.producthunt.com/products/sadiq-e-safar?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-sadiq-e-safar" target="_blank" rel="noopener noreferrer"><img alt="Sadiq E Safar - Modern Platform for Tour Operators | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1125370&amp;theme=neutral&amp;t=1776474888786"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        // Hamburger Menu Toggle
+        const mobileBtn = document.querySelector('.nav-mobile-btn');
+        const mobileMenu = document.querySelector('.nav-mobile-menu');
+        const hamburgerLine = document.querySelector('.hamburger_1_wrap');
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                hamburgerLine.classList.toggle('open');
+                document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : 'auto';
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
