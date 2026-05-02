@@ -2373,7 +2373,7 @@ a {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin-left: auto;
     margin-right: auto
 }
@@ -2471,7 +2471,7 @@ a {
     letter-spacing: -.03em;
     margin-bottom: 24px;
     font-family: Untitled Serif, sans-serif;
-    font-size: 58px;
+    font-size: 54px;
     font-weight: 400;
     line-height: 1
 }
@@ -8573,7 +8573,7 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     background: #569880;
-    color: var(--heading);
+    color: white;
     padding: 8px 40px;
     font-size: .9rem;
     font-weight: 600;
@@ -8996,19 +8996,19 @@ h6 {
 /* Links Layout */
 .footer-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 36px 28px;
+    grid-template-columns: 1fr;
+    gap: 36px 0;
 }
 
-.legal-column {
-    grid-column: 1 / -1;
+.footer-column {
+    width: 100%;
 }
 
 .footer-column h4 {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     color: #fff;
-    margin: 0 0 24px;
+    margin: 0 0 28px;
     position: relative;
     display: inline-block;
 }
@@ -9041,7 +9041,7 @@ h6 {
 .footer-column ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
     transition: 0.3s ease;
 }
@@ -9052,12 +9052,16 @@ h6 {
 
 /* Bottom */
 .footer-bottom {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
     padding-top: 22px;
+    flex-wrap: wrap;
 }
 
 .footer-bottom p {
-    margin: 6px 0;
+    margin: 0;
     font-size: 14px;
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.88);
@@ -9068,6 +9072,12 @@ h6 {
     text-decoration: none;
 }
 
+.footer-badge img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 /* Desktop */
 @media (min-width: 769px) {
     .footer {
@@ -9076,22 +9086,23 @@ h6 {
 
     .footer-content {
         display: grid;
-        grid-template-columns: 1fr 2.5fr;
+        grid-template-columns: 0.8fr 3fr;
         gap: 60px;
         align-items: start;
     }
 
     .footer-links {
         display: flex;
-        gap: 50px;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
         align-items: flex-start;
     }
 
-    .badge-column {
-        margin-left: auto; /* Push badge to the far right */
-        align-self: flex-end;
-        padding-bottom: 10px;
+    .footer-column {
+        flex: 1;
     }
+
 
     .legal-column {
         grid-column: auto;
@@ -9847,4 +9858,181 @@ h6 {
 
 }
 
-
+
+
+/* Home Video Grid */
+.home-video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+    .home-video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-video-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .home-video-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-video-grid .video-card {
+        min-width: 85%;
+        scroll-snap-align: center;
+    }
+}
+
+.video-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 1px solid rgba(26, 188, 156, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(26, 188, 156, 0.12);
+    border-color: rgba(26, 188, 156, 0.3);
+}
+
+.video-thumbnail-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    background: #edf2f7;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.video-card:hover .video-thumbnail {
+    transform: scale(1.05);
+}
+
+.video-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #1abc9c;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(26, 188, 156, 0.2);
+}
+
+.video-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #1e293b;
+    line-height: 1.35;
+}
+
+.video-subtitle {
+    color: #1abc9c;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.video-stats {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.video-btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.watch-now-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #1abc9c;
+    color: #ffffff;
+    padding: 10px 11px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.watch-now-btn:hover {
+    background: #16a085;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.read-guide-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #1e293b;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.read-guide-btn:hover {
+    background: #f1f5f9;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #1e293b;
+}
+
+.watch-now-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cc-how-to-use-preview .section-heading {
+    white-space: nowrap;
+    font-size: min(6vw, 48px) !important;
+}

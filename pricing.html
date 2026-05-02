@@ -317,6 +317,69 @@
         .web-app-btn:hover {
             background-color: #004494;
             border-color: #004494;
+
+        }
+
+        /* Free Plan — first month only tag */
+        .first-month-tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 16px;
+            background: rgba(33, 154, 125, 0.10);
+            color: #1a7a63;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+
+        /* Custom Plan — contact buttons */
+        .custom-contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .custom-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            width: 100%;
+            padding: 17px 20px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: inherit;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .custom-btn-whatsapp {
+            background: #219A7D;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(33, 154, 125, 0.3);
+        }
+
+        .custom-btn-whatsapp:hover {
+            background: #1a7a63;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(33, 154, 125, 0.4);
+        }
+
+        .custom-btn-call {
+            background: transparent;
+            color: #444444;
+            border: 1.5px solid #d8d8d8;
+        }
+
+        .custom-btn-call:hover {
+            border-color: #444444;
+            background: #f6f6f6;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -341,6 +404,7 @@
                             <a href="about-us.html" class="nav-link">About Us</a>
                             <a href="features.html" class="nav-link">Features</a>
                             <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+                            <a href="how-to-use.html" class="nav-link">How To Use</a>
                             <a href="contact.html" class="nav-link">Contact</a>
                         </div>
                     </div>
@@ -388,12 +452,15 @@
                         </div>
 
                         <!-- Desktop Only Buttons -->
+
+
                         <a href="pre-register.html" class="cta cc-nav w-inline-block desktop-only">
                             <div class="cta-bg u-rainbow u-blur-perf"></div>
                             <div class="cta-inner">
-                                <strong>Pre-Register</strong>
+                                <div><strong>Pre-Register</strong></div>
                             </div>
                         </a>
+
 
                         <a href="https://app.sadiqesafar.com/" target="_blank" rel="noopener noreferrer"
                             class="cta cc-nav w-inline-block desktop-only">
@@ -428,14 +495,26 @@
                         </div>
 
                         <div class="mobile-menu-fade" style="--delay: 0.2s;">
-                            <a href="pricing.html" class="nav-mobile-link active w--current"
-                                aria-current="page">Pricing</a>
+                            <a href="pricing.html" class="nav-mobile-link active" aria-current="page">Pricing</a>
                         </div>
 
                         <div class="mobile-menu-fade" style="--delay: 0.25s;">
+                            <a href="how-to-use.html" class="nav-mobile-link">How To Use</a>
+                        </div>
+
+                        <div class="mobile-menu-fade" style="--delay: 0.3s;">
                             <a href="contact.html" class="nav-mobile-link">Contact</a>
                         </div>
-                    </div>
+                    
+                                <div class="mobile-menu-fade" style="--delay: 0.35s; margin-top: 20px;">
+                                    <a href="pre-register.html" class="cta w-inline-block">
+                                        <div class="cta-bg u-rainbow u-blur-perf"></div>
+                                        <div class="cta-inner">
+                                            <div><strong>Pre-Register</strong></div>
+                                        </div>
+                                    </a>
+                                </div>
+</div>
                 </div>
             </div>
         </div>
@@ -592,18 +671,21 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+
                 <div class="footer-logo">
                     <a href="./index.html" class="Jtlogo">
                         <img src="assests/Sadiq-e-Safar-Logo_3.png" alt="Sadiq E Safar Branding Logo"
                             style="height: 70px; width: auto;" />
                     </a>
+
                     <p>
-                        Streamlining tour and event management for
-                        travel agencies worldwide.
+                        India's best tour management application — streamlining tour and event management for
+                        travel agencies & tour operators.
                     </p>
                 </div>
 
                 <div class="footer-links">
+                    <!-- Quick Links -->
                     <div class="footer-column">
                         <h4>Quick Links</h4>
                         <ul>
@@ -613,14 +695,17 @@
                         </ul>
                     </div>
 
+                    <!-- Product -->
                     <div class="footer-column">
                         <h4>Product</h4>
                         <ul>
                             <li><a href="./features.html">Features</a></li>
                             <li><a href="./pricing.html">Pricing</a></li>
+                            <li><a href="./how-to-use.html">How To Use</a></li>
                         </ul>
                     </div>
 
+                    <!-- Legal -->
                     <div class="footer-column legal-column">
                         <h4>Legal</h4>
                         <ul>
@@ -629,16 +714,20 @@
                         </ul>
                     </div>
 
-                    <!-- Badge -->
-                    <div class="footer-column badge-column">
-                        <a href="https://www.producthunt.com/products/sadiq-e-safar?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-sadiq-e-safar" target="_blank" rel="noopener noreferrer"><img alt="Sadiq E Safar - Modern Platform for Tour Operators | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1125370&amp;theme=neutral&amp;t=1776474888786"></a>
-                    </div>
                 </div>
+
             </div>
 
             <div class="footer-bottom">
                 <p>© 2026 Sadiq E Safar. All rights reserved. | Designed And Developed By <a href="https://jilani.tech/"
                         target="_blank">Jilani Tech</a></p>
+                <div class="footer-badge">
+                    <a href="https://www.producthunt.com/products/sadiq-e-safar?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-sadiq-e-safar"
+                        target="_blank" rel="noopener noreferrer"><img
+                            alt="Sadiq E Safar - Modern Platform for Tour Operators | Product Hunt" width="250"
+                            height="54"
+                            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1125370&amp;theme=neutral&amp;t=1776474888786"></a>
+                </div>
             </div>
         </div>
     </footer>
@@ -685,6 +774,8 @@
                     <span class="currency">₹</span>${plan.price_per_month}
                     <span class="plan-period">/ month</span>
                 </div>
+
+                ${plan.subscription_type === 'Free Plan' ? '<div class="first-month-tag">❖ First Month Only</div>' : ''}
 
                 <p class="plan-description">Best plan for your needs</p>
             </div>
@@ -738,9 +829,16 @@
                 <li>✔ Custom Support</li>
             </ul>
 
-            <a href="#" class="cta-button standard-button">
-                Contact Sales
-            </a>
+            <div class="custom-contact-btns">
+                <a href="tel:+919998808555" class="custom-btn custom-btn-call">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.58 1 1 0 01-.25 1.01z"/></svg>
+                    Call Now
+                </a>
+                <a href="https://wa.me/919998808555?text=Hi%21%20%F0%9F%91%8B%20I%20visited%20the%20Sadiq%20E%20Safar%20pricing%20page%20and%20I%27m%20interested%20in%20the%20*Custom%20Plan*%20for%20my%20travel%20agency.%20Could%20you%20please%20get%20in%20touch%20with%20me%20to%20discuss%20the%20requirements%20and%20pricing%3F%20Thank%20you%21%20%F0%9F%99%8F" target="_blank" rel="noopener noreferrer" class="custom-btn custom-btn-whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.404A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.076-1.12l-.292-.173-3.007.847.854-2.942-.19-.302A7.943 7.943 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
         </div>
     </div>
     `;
