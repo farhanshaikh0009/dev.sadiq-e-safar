@@ -8572,7 +8572,7 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     background: #569880;
-    color: var(--heading);
+    color: white;
     padding: 8px 40px;
     font-size: .9rem;
     font-weight: 600;
@@ -10029,7 +10029,9 @@ h6 {
 .watch-now-btn svg {
     width: 16px;
     height: 16px;
-}.cc-how-to-use-preview .section-heading {
+}
+
+.cc-how-to-use-preview .section-heading {
     white-space: nowrap;
     font-size: min(6vw, 48px) !important;
 }
