@@ -7,63 +7,166 @@
     <!-- Homepage - Highest Priority -->
     <url>
         <loc>https://web.sadiqesafar.com/</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Features Page -->
+    <!-- Core Pages -->
     <url>
         <loc>https://web.sadiqesafar.com/features.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- Pricing Page -->
     <url>
         <loc>https://web.sadiqesafar.com/pricing.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- About Us Page -->
     <url>
         <loc>https://web.sadiqesafar.com/about-us.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Contact Page -->
     <url>
         <loc>https://web.sadiqesafar.com/contact.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- Pre-Registration Page -->
     <url>
         <loc>https://web.sadiqesafar.com/pre-register.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- Privacy Policy -->
+    <!-- Solution & Feature Landing Pages -->
+    <url>
+        <loc>https://web.sadiqesafar.com/best-tour-management.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/best-umrah-hajj-planner.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/haj-umrah-tours.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/hajj-umrah-booking-app.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/traveller-app.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- User Guides & Support -->
+    <url>
+        <loc>https://web.sadiqesafar.com/how-to-use.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/registration-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/user-management-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/package-management-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/enquiry-tourist-management-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/transaction-management-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/payment-reminders-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/event-management-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://web.sadiqesafar.com/hotel-booking-guide.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Authentication & Account -->
+    <url>
+        <loc>https://web.sadiqesafar.com/login-register.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Legal Compliance -->
     <url>
         <loc>https://web.sadiqesafar.com/privacy-policy.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
-    <!-- Terms & Conditions -->
     <url>
         <loc>https://web.sadiqesafar.com/terms-condition.html</loc>
-        <lastmod>2026-04-04</lastmod>
+        <lastmod>2026-05-04</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
