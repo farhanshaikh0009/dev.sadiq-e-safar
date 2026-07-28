@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request deletion of your Sadiq E Safar account.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#e63245">
+    <link rel="canonical" href="https://web.sadiqesafar.com/user-delete.html">
+    <link rel="icon" type="image/png" href="assests/icon.png">
+    <title>Delete User Account | Sadiq E Safar</title>
+    <style>
+        :root { color-scheme: light; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #f8f9fa;
+            color: #111827;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .delete-page { width: min(100% - 32px, 750px); margin: 60px auto 0; }
+        h1 {
+            margin: 0 0 31px;
+            color: #e63245;
+            font-size: clamp(2rem, 3vw, 2.55rem);
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: center;
+        }
+        .delete-card {
+            padding: 33px 30px 30px;
+            background: #fff;
+            border: 1px solid #dfe3e8;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 12%);
+        }
+        .intro { margin: 0 0 25px; color: #374151; font-size: 20px; line-height: 1.45; text-align: center; }
+        .field { margin-bottom: 21px; }
+        label { display: block; margin-bottom: 12px; font-size: 20px; font-weight: 700; }
+        input {
+            width: 100%;
+            min-height: 47px;
+            padding: 10px 14px;
+            border: 1px solid #d8dee5;
+            border-radius: 8px;
+            background: #fff;
+            color: #374151;
+            font: inherit;
+            font-size: 20px;
+            outline: none;
+        }
+        input:focus { border-color: #e63245; box-shadow: 0 0 0 3px rgb(230 50 69 / 16%); }
+        .password-wrap { position: relative; }
+        .password-wrap input { padding-right: 58px; }
+        .password-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: grid;
+            width: 52px;
+            height: 47px;
+            padding: 0;
+            place-items: center;
+            border: 1px solid #6b7280;
+            border-radius: 0 8px 8px 0;
+            background: #fff;
+            color: #60758e;
+            cursor: pointer;
+        }
+        .password-toggle:hover { background: #f3f4f6; }
+        .password-toggle svg { width: 21px; height: 21px; }
+        .delete-button {
+            width: 100%;
+            min-height: 47px;
+            border: 0;
+            border-radius: 8px;
+            background: #e63245;
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .delete-button:hover { background: #cc2639; }
+        .delete-button:focus-visible { outline: 3px solid rgb(230 50 69 / 30%); outline-offset: 2px; }
+        .last-updated { margin: 63px 0 32px; font-size: 20px; font-style: italic; text-align: center; }
+        .form-message { min-height: 1.3em; margin: 16px 0 0; color: #15803d; text-align: center; }
+        @media (max-width: 600px) {
+            .delete-page { width: min(100% - 24px, 750px); margin-top: 36px; }
+            .delete-card { padding: 25px 18px; }
+            .intro, label, input, .delete-button, .last-updated { font-size: 17px; }
+            h1 { margin-bottom: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <main class="delete-page">
+        <h1>Delete User Account</h1>
+        <section class="delete-card" aria-labelledby="delete-instructions">
+            <p class="intro" id="delete-instructions">Please enter your registered email and password to delete your account.</p>
+            <form id="delete-user-form">
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2.5 12s3.4-5.5 9.5-5.5S21.5 12 21.5 12s-3.4 5.5-9.5 5.5S2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.8"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <button class="delete-button" type="submit">Delete User</button>
+                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+        <p class="last-updated">Last Updated: November 2025</p>
+    </main>
+    <script>
+        const form = document.getElementById('delete-user-form');
+        const password = document.getElementById('password');
+        const passwordToggle = document.querySelector('.password-toggle');
+        const message = document.getElementById('form-message');
+
+        passwordToggle.addEventListener('click', () => {
+            const showing = password.type === 'text';
+            password.type = showing ? 'password' : 'text';
+            passwordToggle.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+            passwordToggle.setAttribute('aria-pressed', String(!showing));
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (form.reportValidity()) {
+                message.textContent = 'Your account has been successfully deleted.';
+            }
+        });
+    </script>
+</body>
+</html>
