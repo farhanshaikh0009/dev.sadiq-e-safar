@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,11 +58,12 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            min-height: 1000px; /* Ensures it fits on 1 A4 page without spilling */
+            min-height: 1000px;
+            /* Ensures it fits on 1 A4 page without spilling */
         }
 
         .invoice-content {
-            padding: 40px 40px 120px 40px; 
+            padding: 40px 40px 120px 40px;
             position: relative;
             z-index: 10;
         }
@@ -147,10 +149,24 @@
             font-weight: 800;
             color: #3f3f46;
         }
-        
-        th:nth-child(2), td:nth-child(2) { text-align: center; width: 15%; } 
-        th:nth-child(3), td:nth-child(3) { text-align: right; width: 20%; } 
-        th:nth-child(4), td:nth-child(4) { text-align: right; width: 20%; } 
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            text-align: center;
+            width: 15%;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            text-align: right;
+            width: 20%;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            text-align: right;
+            width: 20%;
+        }
 
         td {
             padding: 18px 15px;
@@ -210,63 +226,77 @@
             z-index: 1;
             pointer-events: none;
         }
-        
+
         @media screen and (max-width: 768px) {
             body {
                 padding: 20px 10px;
             }
+
             .invoice-content {
                 padding: 30px 20px 80px 20px;
             }
+
             .title {
                 font-size: 38px;
             }
+
             .header-top {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
                 margin-bottom: 20px;
             }
+
             #invoice-date-no {
                 text-align: left !important;
             }
+
             .address-section {
                 flex-direction: column;
                 gap: 30px;
             }
+
             .address-block {
                 width: 100%;
                 padding-left: 0 !important;
             }
-            th, td {
+
+            th,
+            td {
                 padding: 10px 8px;
                 font-size: 13px;
             }
+
             table {
                 min-width: 400px;
             }
+
             .table-container {
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
             }
+
             .logo-text img {
                 height: 70px !important;
             }
+
             .shape-container {
                 height: 200px;
             }
         }
-        
+
         @media print {
             body {
                 background-color: transparent;
                 padding: 0;
-                -webkit-print-color-adjust: exact; 
-                print-color-adjust: exact; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
+
             .action-bar {
                 display: none;
             }
+
             .invoice-container {
                 box-shadow: none;
                 margin: 0;
@@ -274,11 +304,13 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="action-bar">
         <button class="download-btn" onclick="downloadPDF()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -292,14 +324,16 @@
         <div class="shape-container">
             <svg viewBox="0 0 800 380" width="100%" height="100%" preserveAspectRatio="none">
                 <path d="M0,180 Q180,100 450,300 L0,300 Z" fill="#ebf6f2" opacity="0.95"></path>
-                <path d="M0,300 L0,260 C150,230 300,340 500,290 C650,240 750,120 800,20 L800,380 L0,380 Z" fill="#219a7d"></path>
+                <path d="M0,300 L0,260 C150,230 300,340 500,290 C650,240 750,120 800,20 L800,380 L0,380 Z"
+                    fill="#219a7d"></path>
             </svg>
         </div>
 
         <div class="invoice-content">
             <div class="header-top">
                 <div class="logo-text">
-                    <img src="https://web.sadiqesafar.com/assests/sadiq-e-safar-logo.png" alt="Sadiq-e-Safar Logo" style="height: 100px; width: auto; object-fit: contain;">
+                    <img src="https://web.sadiqesafar.com/assests/sadiq-e-safar-logo.png" alt="Sadiq-e-Safar Logo"
+                        style="height: 100px; width: auto; object-fit: contain;">
                 </div>
                 <div class="invoice-no" id="invoice-date-no" style="text-align: right;">
                     Date: 09 April, 2026
@@ -357,7 +391,8 @@
             </div>
 
             <div class="footer-info">
-                <div style="margin-bottom: 5px;"><strong>Payment method:</strong> <span id="payment-method">N/A</span></div>
+                <div style="margin-bottom: 5px;"><strong>Payment method:</strong> <span id="payment-method">N/A</span>
+                </div>
                 <div><strong>Transaction ID:</strong> <span id="transaction-id">N/A</span></div>
             </div>
         </div>
@@ -412,7 +447,7 @@
                             const phone = agency.mobileNo ? `Ph: ${agency.mobileNo}` : '';
                             const email = agency.emailId || '';
                             const address = [agency.address, agency.city, agency.state, agency.pinCode].filter(Boolean).join(', ');
-                            
+
                             billedToElem.innerHTML = `<strong>${name}</strong><br>${address}<br>${phone}<br>${email}`;
                         }
 
@@ -442,7 +477,7 @@
                         if (paymentMethodElem && payment) {
                             paymentMethodElem.innerText = payment.transaction_mode || 'N/A';
                         }
-                        
+
                         const txnIdElem = document.getElementById("transaction-id");
                         if (txnIdElem && payment) {
                             txnIdElem.innerText = payment.transaction_id || 'N/A';
@@ -455,23 +490,60 @@
                 // Formatting for Date fallback
                 const dateElem = document.getElementById("invoice-date-no");
                 if (dateElem && dateElem.innerText.includes('Date: 09 April, 2026')) {
-                   const formattedDate = new Date().toLocaleDateString("en-GB", { day: '2-digit', month: 'long', year: 'numeric' });
-                   dateElem.innerHTML = `Date: ${formattedDate}`;
+                    const formattedDate = new Date().toLocaleDateString("en-GB", { day: '2-digit', month: 'long', year: 'numeric' });
+                    dateElem.innerHTML = `Date: ${formattedDate}`;
                 }
             }
         });
+
+        // Helper: convert base64 (standard or URL-safe) to Blob
+        function b64toBlob(b64Data, contentType) {
+            contentType = contentType || '';
+            var sliceSize = 512;
+
+            // Strip data URI prefix if present (e.g. "data:application/pdf;base64,")
+            if (b64Data.indexOf('base64,') !== -1) {
+                b64Data = b64Data.split('base64,')[1];
+            }
+
+            // Remove whitespace
+            b64Data = b64Data.replace(/[\s\r\n]+/g, '');
+
+            // Convert URL-safe base64 to standard base64
+            b64Data = b64Data.replace(/-/g, '+').replace(/_/g, '/');
+
+            // Fix padding
+            while (b64Data.length % 4 !== 0) {
+                b64Data += '=';
+            }
+
+            var byteCharacters = atob(b64Data);
+            var byteArrays = [];
+
+            for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                var slice = byteCharacters.slice(offset, offset + sliceSize);
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+                byteArrays.push(byteArray);
+            }
+
+            return new Blob(byteArrays, { type: contentType });
+        }
 
         async function downloadPDF() {
             const element = document.getElementById('invoice');
             const btn = document.querySelector('.download-btn');
             const originalText = btn.innerHTML;
-            
+
             // Add loading state
             btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg> Generating...`;
             btn.style.pointerEvents = 'none';
 
             let dynamicStyle = document.getElementById('loading-style-spin');
-            if(!dynamicStyle) {
+            if (!dynamicStyle) {
                 dynamicStyle = document.createElement('style');
                 dynamicStyle.id = 'loading-style-spin';
                 dynamicStyle.innerHTML = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
@@ -481,7 +553,7 @@
             try {
                 // Clone HTML to send to backend
                 const cloneDoc = document.documentElement.cloneNode(true);
-                
+
                 // Hide action bar logic in cloned DOM
                 const actionBarHtml = cloneDoc.querySelector('.action-bar');
                 if (actionBarHtml) actionBarHtml.remove();
@@ -504,16 +576,79 @@
                 });
 
                 const result = await response.json();
-                
+
+
                 if (result && result.data) {
-                    const linkSource = `data:application/pdf;base64,${result.data}`;
-                    const downloadLink = document.createElement("a");
-                    downloadLink.href = linkSource;
-                    downloadLink.download = `Invoice_${currentTransactionId}.pdf`;
+                    const pdfData = result.data;
+                    let blob;
+
+                    if (
+                        typeof pdfData === 'string' &&
+                        /^\s*\d+(,\s*\d+)+\s*$/.test(pdfData)
+                    ) {
+                        // API returned comma-separated PDF byte values
+                        const bytes = Uint8Array.from(
+                            pdfData.trim().split(',').map(Number)
+                        );
+
+                        blob = new Blob([bytes], {
+                            type: 'application/pdf'
+                        });
+
+                    } else if (
+                        pdfData &&
+                        pdfData.type === 'Buffer' &&
+                        Array.isArray(pdfData.data)
+                    ) {
+                        // API returned a serialized Node.js Buffer
+                        const bytes = Uint8Array.from(pdfData.data);
+
+                        blob = new Blob([bytes], {
+                            type: 'application/pdf'
+                        });
+
+                    } else if (Array.isArray(pdfData)) {
+                        // API returned a numeric byte array
+                        const bytes = Uint8Array.from(pdfData);
+
+                        blob = new Blob([bytes], {
+                            type: 'application/pdf'
+                        });
+
+                    } else if (typeof pdfData === 'string') {
+                        // API returned Base64 data
+                        blob = b64toBlob(pdfData, 'application/pdf');
+
+                    } else {
+                        throw new Error('Unsupported PDF data format');
+                    }
+
+                    if (
+                        blob.size < 5 ||
+                        new TextDecoder().decode(
+                            await blob.slice(0, 5).arrayBuffer()
+                        ) !== '%PDF-'
+                    ) {
+                        throw new Error('Invalid PDF data received from API');
+                    }
+
+                    console.log('PDF Blob size:', blob.size, 'bytes');
+
+                    const blobUrl = URL.createObjectURL(blob);
+                    const downloadLink = document.createElement('a');
+
+                    downloadLink.href = blobUrl;
+                    downloadLink.download =
+                        `Invoice_${currentTransactionId}.pdf`;
+
+                    document.body.appendChild(downloadLink);
                     downloadLink.click();
+                    downloadLink.remove();
+
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+
                 } else {
-                    alert("Failed to generate PDF properly. Check console for details.");
-                    console.error("PDF API Response:", result);
+                    throw new Error('PDF data missing from API response');
                 }
             } catch (error) {
                 console.error("Error generating PDF via API:", error);
@@ -525,4 +660,5 @@
         }
     </script>
 </body>
+
 </html>
