@@ -486,6 +486,45 @@
             }
         }
 
+        @media (max-width: 600px) {
+            .top-announcement-bar {
+                padding: 7px 36px 7px 10px;
+            }
+            .announcement-content {
+                flex-wrap: nowrap;
+                gap: 6px;
+                justify-content: center;
+                align-items: center;
+            }
+            .announcement-badge {
+                display: none;
+            }
+            .announcement-text {
+                font-size: 11.5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+            .announcement-btn {
+                font-size: 11px;
+                padding: 4px 10px;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .announcement-text {
+                max-width: 140px;
+                font-size: 11px;
+            }
+            .announcement-btn {
+                font-size: 10.5px;
+                padding: 3px 8px;
+            }
+        }
+
         /* ===== SPECIAL OFFER BANNER (PROFESSIONAL SAAS REDESIGN) ===== */
         .special-offer-card {
             background: radial-gradient(120% 120% at 50% 0%, #13223f 0%, #0b1326 100%);
